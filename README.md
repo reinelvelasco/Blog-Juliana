@@ -6,6 +6,7 @@ Sitio web estático interactivo desarrollado para la actividad académica indivi
 - **Programa de Formación:** Tecnología en Análisis y Desarrollo de Software (ADSO)
 - **Módulo Académico:** Metodología de la Investigación
 - **Año:** 2026
+- **Sitio Web en Vivo (Netlify):** https://metodologia-investigacion-cua.netlify.app/
 
 ---
 

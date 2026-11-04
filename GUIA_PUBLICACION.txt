@@ -135,7 +135,7 @@ Estimado docente y compañeros de curso,
 Comparto con ustedes mi blog académico digital para la actividad individual de
 la unidad sobre "Los diseños de investigación cuantitativos y cualitativos":
 
-Enlace del blog: https://tu-nombre-elegido.netlify.app/
+Enlace del blog: https://metodologia-investigacion-cua.netlify.app/
 Repositorio en GitHub: https://github.com/reinelvelasco/Blog-Juliana
 
 Aspectos destacados del blog:
