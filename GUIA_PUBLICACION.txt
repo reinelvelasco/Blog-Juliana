@@ -1,0 +1,218 @@
+================================================================================
+GUÍA MAESTRA DE PUBLICACIÓN Y CONFIGURACIÓN DEL BLOG ACADÉMICO
+Tema: Los Diseños de Investigación Cuantitativos y Cualitativos
+Módulo: Metodología de la Investigación
+Programa: Tecnología en Análisis y Desarrollo de Software (ADSO)
+================================================================================
+
+¡Felicidades! Tu blog académico está 100% construido con HTML5, CSS3 y JavaScript
+puros, con modo claro/oscuro, diseño adaptativo para móviles, quiz interactivo,
+artículos científicos reales verificados e integración oficial de Disqus.
+
+A continuación encontrarás los pasos exactos para publicarlo en la nube a través
+de Netlify, configurar los comentarios y entregar la actividad académica.
+
+================================================================================
+ÍNDICE
+================================================================================
+1. PASO A PASO: PUBLICACIÓN EN NETLIFY DESDE GITHUB
+2. PERSONALIZAR EL NOMBRE DEL ENLACE (DOMINIO GRATUITO)
+3. ACTUALIZAR LA URL OFICIAL EN EL CÓDIGO (BLOG_URL_OFICIAL)
+4. ACTIVAR DISQUS EN NETLIFY (CONFIGURAR "TRUSTED DOMAINS")
+5. CÓMO CAMBIAR LAS IMÁGENES POR FOTOGRAFÍAS PROPIAS
+6. CÓMO PRESENTAR Y COMPARTIR EL BLOG EN EL FORO DEL CURSO
+7. CHECKLIST DE ELEMENTOS QUE DEBES PERSONALIZAR TÚ
+8. ESTADO DE VERIFICACIÓN DE ARTÍCULOS Y ENLACES CIENTÍFICOS
+
+================================================================================
+1. PASO A PASO: PUBLICACIÓN EN NETLIFY DESDE GITHUB
+================================================================================
+Netlify se conecta de manera directa y gratuita con tu cuenta de GitHub,
+publicando automáticamente el sitio cada vez que hagas un "git push":
+
+1. Entra a https://www.netlify.com/ e inicia sesión (recomendado: haz clic en
+   "Log in with GitHub").
+2. En tu panel principal (Team Overview), haz clic en el botón azul:
+   "Add new site"  -->  "Import an existing project".
+3. En la lista de proveedores Git, selecciona "GitHub". Si es la primera vez,
+   autoriza a Netlify para acceder a tus repositorios.
+4. Busca y selecciona tu repositorio: "Blog-Juliana" (o reinelvelasco/Blog-Juliana).
+5. En la pantalla de configuración de despliegue ("Site configuration"):
+   - Branch to deploy: main
+   - Base directory: (déjalo completamente VACÍO)
+   - Build command: (déjalo completamente VACÍO)
+   - Publish directory: (déjalo completamente VACÍO o escribe '.')
+6. Haz clic en el botón azul inferior: "Deploy site".
+7. En unos 15 a 30 segundos, Netlify habrá publicado tu blog. Verás un enlace
+   temporal con un nombre aleatorio (por ejemplo: https://brave-curie-123456.netlify.app).
+
+================================================================================
+2. PERSONALIZAR EL NOMBRE DEL ENLACE (DOMINIO GRATUITO)
+================================================================================
+Para que el enlace tenga un aspecto profesional y fácil de recordar para tu
+docente y compañeros:
+
+1. En el panel de tu sitio en Netlify, ve a la pestaña "Site configuration" (o
+   "Site settings").
+2. En la sección "General"  -->  "Site details", busca la opción "Change site name".
+3. Escribe un nombre descriptivo y académico en minúsculas y guiones, por ejemplo:
+   - blog-investigacion-adso
+   - blog-metodologia-juliana
+   - investigacion-cuantitativa-cualitativa
+4. Haz clic en "Save".
+5. Tu nuevo enlace oficial será:
+   https://tu-nombre-elegido.netlify.app/
+
+================================================================================
+3. ACTUALIZAR LA URL OFICIAL EN EL CÓDIGO (BLOG_URL_OFICIAL)
+================================================================================
+Para que el sistema de comentarios de Disqus indexe tus hilos de discusión
+de manera fija y canónica bajo tu dominio de producción:
+
+1. Abre el archivo `index.html` en tu editor o en GitHub.
+2. Ve al final del archivo (aproximadamente línea 690), en la sección de script de
+   Disqus.
+3. Ubica la constante:
+   const BLOG_URL_OFICIAL = ''; // <-- REEMPLAZAR por la URL final de Netlify
+
+4. Pega tu URL de Netlify entre las comillas simples. Por ejemplo:
+   const BLOG_URL_OFICIAL = 'https://tu-nombre-elegido.netlify.app/';
+
+5. Guarda el archivo, haz un commit y súbelo a GitHub:
+   git add index.html
+   git commit -m "feat: configurar URL oficial de Netlify para comentarios Disqus"
+   git push origin main
+
+6. Netlify detectará el cambio y actualizará el blog en pocos segundos.
+
+================================================================================
+4. ACTIVAR DISQUS EN NETLIFY (CONFIGURAR "TRUSTED DOMAINS")
+================================================================================
+Por motivos de seguridad, Disqus bloquea la carga de la caja de comentarios si el
+sitio web no está explícitamente autorizado en su lista blanca:
+
+1. Inicia sesión en tu cuenta de Disqus: https://disqus.com/
+2. Ve a la consola de administración de tu sitio con shortname: "investigacioncua"
+   Enlace directo: https://investigacioncua.disqus.com/admin/settings/general/
+3. En el menú lateral izquierdo, haz clic en "Community" (o "General Settings").
+4. Busca el apartado titulado "Trusted Domains" (Dominios de confianza).
+5. Escribe el dominio de tu sitio en Netlify (sin https:// ni diagonales):
+   Ejemplo: tu-nombre-elegido.netlify.app
+   (Si también quieres probarlo en local, puedes agregar: localhost).
+6. Haz clic en "Save changes" al final de la página.
+7. Abre tu blog en el navegador: ¡la caja de comentarios y el contador de
+   Disqus cargarán perfectamente!
+
+================================================================================
+5. CÓMO CAMBIAR LAS IMÁGENES POR FOTOGRAFÍAS PROPIAS
+================================================================================
+El blog ya cuenta con 5 ilustraciones conceptuales SVG para que se vea
+impecable desde el primer minuto. Si deseas reemplazarlas por fotografías
+académicas o técnicas:
+
+1. Descarga imágenes gratuitas de alta calidad en:
+   - Unsplash: https://unsplash.com/es
+   - Pexels: https://www.pexels.com/es-es/
+2. Guarda tus imágenes en la carpeta `img/` con los nombres y medidas sugeridas:
+   - Portada principal: `img/hero-portada.jpg` (1200 x 630 px)
+   - Ruta cuantitativa: `img/cuantitativo-concept.jpg` (800 x 500 px)
+   - Ruta cualitativa: `img/cualitativo-concept.jpg` (800 x 500 px)
+   - Comparación: `img/comparacion-metodos.jpg` (800 x 450 px)
+   - Técnicas: `img/tecnicas-recoleccion.jpg` (800 x 450 px)
+3. En `index.html`, busca el comentario de cada imagen y cambia la extensión de
+   .svg a .jpg (por ejemplo: src="img/hero-portada.jpg").
+4. En el archivo `img/LEEME.txt` tienes explicaciones detalladas adicionales.
+
+================================================================================
+6. CÓMO PRESENTAR Y COMPARTIR EL BLOG EN EL FORO DEL CURSO
+================================================================================
+Puedes usar este modelo de mensaje para tu entrega académica en la plataforma
+del curso:
+
+--------------------------------------------------------------------------------
+Estimado docente y compañeros de curso,
+
+Comparto con ustedes mi blog académico digital para la actividad individual de
+la unidad sobre "Los diseños de investigación cuantitativos y cualitativos":
+
+Enlace del blog: https://tu-nombre-elegido.netlify.app/
+Repositorio en GitHub: https://github.com/reinelvelasco/Blog-Juliana
+
+Aspectos destacados del blog:
+- Análisis epistemológico y metodológico según Hernández-Sampieri (2018) y
+  Ñaupas Paitán et al. (2018).
+- Tipologías cuantitativas (experimentales y no experimentales) y cualitativas
+  (teoría fundamentada, etnografía, fenomenología, investigación-acción, etc.).
+- Vinculación constante con el desarrollo de software y ciencias de la computación.
+- Matriz comparativa interactiva y análisis de 5 técnicas de recolección de datos.
+- 6 investigaciones científicas reales y verificadas (2016-2024) indexadas en
+  SciELO, Redalyc y Dialnet.
+- Quiz interactivo de 5 preguntas para autoevaluar los conceptos aprendidos.
+- Sistema de comentarios en vivo (vía Disqus) al final de la página.
+
+¡Quedo atento(a) a sus valiosas observaciones y comentarios para enriquecer
+el debate académico!
+--------------------------------------------------------------------------------
+
+================================================================================
+7. CHECKLIST DE ELEMENTOS QUE DEBES PERSONALIZAR TÚ
+================================================================================
+[ ] Reemplazar el nombre del estudiante:
+    - En `index.html` busca: "[Nombre del Autor - Estudiante ADSO]" en el Hero
+      (línea ~95) y en el Footer (línea ~650).
+    - En `README.md` busca: "[Nombre del Autor - Estudiante de ADSO]".
+[ ] Configurar la URL de Netlify:
+    - En `index.html` colocar la URL en `const BLOG_URL_OFICIAL = '...';`.
+[ ] Autorizar el dominio en Disqus:
+    - Agregar `tu-sitio.netlify.app` en "Trusted Domains" de Disqus.
+[ ] (Opcional) Sustituir imágenes SVG por fotografías .jpg en la carpeta `img/`.
+
+================================================================================
+8. ESTADO DE VERIFICACIÓN DE ARTÍCULOS Y ENLACES CIENTÍFICOS
+================================================================================
+Todos los artículos incluidos son 100% REALES, fueron contrastados directamente
+en las bases de datos académicas, pertenecen al período 2016-2026 y cuentan con
+DOI o enlace directo verificable:
+
+1. INVESTIGACIONES CUANTITATIVAS (3 VERIFICADAS):
+   - Riquelme-Plaza, I., Cabero-Almenara, J., & Marín-Díaz, V. (2022).
+     "Validación del cuestionario de competencia digital docente en profesorado universitario chileno".
+     Revista Electrónica Educare, 26(1), 222-240. (SciELO Costa Rica).
+     Diseño: No experimental transeccional psicométrico (Cuestionario a 1.122 docentes).
+     DOI: https://doi.org/10.15359/ree.26-1.12 [VERIFICADO]
+
+   - Guerrero Posadas, M., & García Orozco, J. (2016).
+     "Desarrollo del pensamiento algorítmico con el apoyo de objetos de aprendizaje generativos".
+     Píxel-Bit. Revista de Medios y Educación, (49), 163-175. (Redalyc / Dialnet).
+     Diseño: Cuasiexperimental con pretest y postest en ingeniería de sistemas.
+     DOI: https://doi.org/10.12795/pixelbit.2016.i49.11 [VERIFICADO]
+
+   - Sánchez Sánchez, M. I., Meraz Ruiz, L., & Martínez Rodríguez, R. A. (2021).
+     "Factores que influyen en la adopción de sistemas de información en las MiPyMes".
+     CIENCIA ergo-sum, 28(4), 1-14. (Redalyc).
+     Diseño: No experimental transeccional correlacional-causal (Modelo TOE).
+     DOI: https://doi.org/10.30878/ces.v28n4a7 [VERIFICADO]
+
+2. INVESTIGACIONES CUALITATIVAS (3 VERIFICADAS):
+   - Muñoz, I. C., Collazos, C. A., & Hurtado, J. A. (2024).
+     "Desafíos de colaboración en la adopción de Scrum: un estudio en equipos de desarrollo de software del departamento del Cauca, Colombia".
+     TecnoLógicas, 27(59), e2749. (SciELO Colombia / Redalyc).
+     Diseño: Cualitativo, estudio de caso múltiple (Entrevistas a líderes de software).
+     DOI: https://doi.org/10.22430/22565337.2749 [VERIFICADO]
+
+   - Gutiérrez Giraldo, M. C., Agudelo Cely, N., & Caro, E. O. (2016).
+     "La etnografía educativa virtual y la formación de docentes".
+     Praxis & Saber, 7(15), 41-65. (Redalyc / SciELO).
+     Diseño: Cualitativo etnográfico virtual (Observación participante en aulas virtuales).
+     DOI: https://doi.org/10.19053/22160159.v7.n15.2016.5722 [VERIFICADO]
+
+   - Hernández Suárez, C. A., Gamboa Suárez, A. A., & Avendaño Castro, W. R. (2022).
+     "Diseño de algoritmos en tecnología con Scratch para el desarrollo del Pensamiento Computacional".
+     Revista Boletín Redipe, 11(2), 461-476. (Dialnet).
+     Diseño: Cualitativo de Investigación-Acción (IA en aula con programación en bloques).
+     DOI: https://doi.org/10.36260/rbr.v11i2.1696 [VERIFICADO]
+
+================================================================================
+Fin de la guía. ¡Muchos éxitos en la presentación de tu blog académico!
+================================================================================
+

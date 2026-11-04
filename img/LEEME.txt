@@ -1,0 +1,84 @@
+================================================================================
+GUÍA DE IMÁGENES Y RECURSOS GRÁFICOS DEL BLOG
+Módulo: Metodología de la Investigación
+Tema: Los diseños de investigación cuantitativos y cualitativos
+================================================================================
+
+Este blog incluye marcadores e ilustraciones SVG ligeras por defecto para que
+el sitio web funcione de inmediato sin imágenes rotas.
+
+Si deseas utilizar fotografías o gráficos personalizados, sigue estas
+indicaciones sencillas.
+
+--------------------------------------------------------------------------------
+1. IMÁGENES ESPERADAS Y MEDIDAS RECOMENDADAS
+--------------------------------------------------------------------------------
+
+1. PORTADA PRINCIPAL (HERO)
+   - Archivo sugerido: img/hero-portada.jpg (o formato .webp / .png)
+   - Medidas recomendadas: 1200 x 630 px (proporción panorámica 16:9)
+   - Peso óptimo: menos de 250 KB
+   - Qué buscar en bancos gratuitos: "data science technology research",
+     "software developer thinking", "scientific method abstract", "technology analytics".
+   - Línea a editar en index.html:
+     Busca el comentario <!-- IMAGEN RECOMENDADA: Portada principal del blog -->
+     y cambia: src="img/hero-portada.svg" por src="img/hero-portada.jpg"
+
+2. INFOGRAFÍA / ILUSTRACIÓN DE RUTA CUANTITATIVA
+   - Archivo sugerido: img/cuantitativo-concept.jpg (o .webp / .png)
+   - Medidas recomendadas: 800 x 500 px (proporción 16:10)
+   - Peso óptimo: menos de 180 KB
+   - Qué buscar: "data analytics chart", "code statistics", "experiment laboratory technology".
+   - Línea a editar en index.html:
+     Busca <!-- IMAGEN RECOMENDADA: Ruta Cuantitativa -->
+
+3. INFOGRAFÍA / ILUSTRACIÓN DE RUTA CUALITATIVA
+   - Archivo sugerido: img/cualitativo-concept.jpg (o .webp / .png)
+   - Medidas recomendadas: 800 x 500 px (proporción 16:10)
+   - Peso óptimo: menos de 180 KB
+   - Qué buscar: "team interview discussion", "user experience research", "agile retrospective collaboration".
+   - Línea a editar en index.html:
+     Busca <!-- IMAGEN RECOMENDADA: Ruta Cualitativa -->
+
+4. ILUSTRACIÓN DE COMPARACIÓN Y MATRIZ METODOLÓGICA
+   - Archivo sugerido: img/comparacion-metodos.jpg (o .webp / .png)
+   - Medidas recomendadas: 800 x 450 px
+   - Peso óptimo: menos de 150 KB
+   - Qué buscar: "balance analysis technology", "comparison workflow software".
+   - Línea a editar en index.html:
+     Busca <!-- IMAGEN RECOMENDADA: Comparación de Métodos -->
+
+5. TÉCNICAS E INSTRUMENTOS DE RECOLECCIÓN
+   - Archivo sugerido: img/tecnicas-recoleccion.jpg (o .webp / .png)
+   - Medidas recomendadas: 800 x 450 px
+   - Peso óptimo: menos de 150 KB
+   - Qué buscar: "survey feedback questionnaire", "software user testing interview".
+   - Línea a editar en index.html:
+     Busca <!-- IMAGEN RECOMENDADA: Técnicas e Instrumentos -->
+
+--------------------------------------------------------------------------------
+2. BANCOS DE IMÁGENES GRATUITOS Y LIBRES DE DERECHOS (CREATIVE COMMONS / UNSPASH)
+--------------------------------------------------------------------------------
+Puedes descargar imágenes profesionales en alta resolución sin costo en:
+- Unsplash: https://unsplash.com/es
+- Pexels: https://www.pexels.com/es-es/
+- Pixabay: https://pixabay.com/es/
+
+Consejo de rendimiento:
+Antes de guardar la imagen en la carpeta img/, comprímela gratuitamente en:
+https://tinypng.com/ o https://squoosh.app/
+Esto garantizará que tu sitio cargue en menos de un segundo tanto en móviles como en computadores.
+
+--------------------------------------------------------------------------------
+3. ¿CÓMO REEMPLAZAR UNA IMAGEN EN EL CÓDIGO?
+--------------------------------------------------------------------------------
+Solo debes abrir `index.html` con cualquier editor de texto o IDE, ubicar el bloque
+de la figura deseada y cambiar el atributo `src`:
+
+Ejemplo:
+  Antes:  <img src="img/hero-portada.svg" alt="..." loading="lazy">
+  Después: <img src="img/hero-portada.jpg" alt="..." loading="lazy">
+
+¡Listo! No necesitas modificar el archivo CSS ni tocar ninguna otra línea.
+================================================================================
+

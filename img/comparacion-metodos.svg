@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="compGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#090d16" />
+      <stop offset="100%" stop-color="#1e293b" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#compGrad)" rx="16"/>
+
+  <!-- Left Block: Cuantitativo -->
+  <rect x="70" y="100" width="310" height="250" rx="14" fill="#0f172a" stroke="#0284c7" stroke-width="2"/>
+  <rect x="70" y="100" width="310" height="50" rx="14" fill="#0369a1"/>
+  <text x="225" y="132" font-family="system-ui, sans-serif" font-size="16" font-weight="700" fill="#ffffff" text-anchor="middle">ENFOQUE CUANTITATIVO</text>
+  <text x="95" y="180" font-family="system-ui, sans-serif" font-size="13" fill="#cbd5e1">• Razonamiento Deductivo</text>
+  <text x="95" y="210" font-family="system-ui, sans-serif" font-size="13" fill="#cbd5e1">• Medición Numérica y Estadística</text>
+  <text x="95" y="240" font-family="system-ui, sans-serif" font-size="13" fill="#cbd5e1">• Prueba de Hipótesis y Control</text>
+  <text x="95" y="270" font-family="system-ui, sans-serif" font-size="13" fill="#cbd5e1">• Generalización de Resultados</text>
+  <text x="95" y="300" font-family="system-ui, sans-serif" font-size="13" fill="#38bdf8">• Rol: Diseños Experimentales / Encuestas</text>
+
+  <!-- VS circle -->
+  <circle cx="400" cy="225" r="28" fill="#1e293b" stroke="#f59e0b" stroke-width="3"/>
+  <text x="400" y="232" font-family="system-ui, sans-serif" font-size="16" font-weight="800" fill="#fbbf24" text-anchor="middle">VS</text>
+
+  <!-- Right Block: Cualitativo -->
+  <rect x="420" y="100" width="310" height="250" rx="14" fill="#0f172a" stroke="#7e22ce" stroke-width="2"/>
+  <rect x="420" y="100" width="310" height="50" rx="14" fill="#6b21a8"/>
+  <text x="575" y="132" font-family="system-ui, sans-serif" font-size="16" font-weight="700" fill="#ffffff" text-anchor="middle">ENFOQUE CUALITATIVO</text>
+  <text x="445" y="180" font-family="system-ui, sans-serif" font-size="13" fill="#cbd5e1">• Razonamiento Inductivo</text>
+  <text x="445" y="210" font-family="system-ui, sans-serif" font-size="13" fill="#cbd5e1">• Significados y Experiencia Humana</text>
+  <text x="445" y="240" font-family="system-ui, sans-serif" font-size="13" fill="#cbd5e1">• Hipótesis Emergentes en el Proceso</text>
+  <text x="445" y="270" font-family="system-ui, sans-serif" font-size="13" fill="#cbd5e1">• Profundidad e Inmersión Contextual</text>
+  <text x="445" y="300" font-family="system-ui, sans-serif" font-size="13" fill="#c084fc">• Rol: Teoría Fundamentada / Entrevistas</text>
+
+  <!-- Top Badge -->
+  <text x="400" y="55" font-family="system-ui, sans-serif" font-size="18" font-weight="700" fill="#f8fafc" text-anchor="middle">MATRIZ COMPARATIVA DE RUTAS METODOLÓGICAS</text>
+
+  <text x="400" y="390" font-family="system-ui, sans-serif" font-size="12" font-weight="500" fill="#94a3b8" text-anchor="middle">
+    Placeholder activo | Reemplazar por img/comparacion-metodos.jpg
+  </text>
+</svg>
+

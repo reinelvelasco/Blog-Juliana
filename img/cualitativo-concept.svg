@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="qualGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#3b0764" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#qualGrad)" rx="16"/>
+
+  <!-- Conceptual Network / Semantic Nodes -->
+  <g transform="translate(400, 230)">
+    <!-- Central Node -->
+    <circle cx="0" cy="0" r="48" fill="#581c87" stroke="#c084fc" stroke-width="2.5" />
+    <text x="0" y="6" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#f3e8ff" text-anchor="middle">SIGNIFICADO</text>
+
+    <!-- Connecting Edges -->
+    <line x1="-38" y1="-28" x2="-140" y2="-90" stroke="#a855f7" stroke-width="2" stroke-dasharray="4"/>
+    <line x1="38" y1="-28" x2="140" y2="-90" stroke="#a855f7" stroke-width="2" stroke-dasharray="4"/>
+    <line x1="-48" y1="5" x2="-160" y2="30" stroke="#a855f7" stroke-width="2" stroke-dasharray="4"/>
+    <line x1="48" y1="5" x2="160" y2="30" stroke="#a855f7" stroke-width="2" stroke-dasharray="4"/>
+    <line x1="-28" y1="38" x2="-100" y2="110" stroke="#a855f7" stroke-width="2" stroke-dasharray="4"/>
+    <line x1="28" y1="38" x2="100" y2="110" stroke="#a855f7" stroke-width="2" stroke-dasharray="4"/>
+
+    <!-- Satellite Nodes -->
+    <circle cx="-140" cy="-90" r="32" fill="#1e1b4b" stroke="#e879f9" stroke-width="2"/>
+    <text x="-140" y="-85" font-family="system-ui, sans-serif" font-size="10" font-weight="600" fill="#f5d0fe" text-anchor="middle">Contexto</text>
+
+    <circle cx="140" cy="-90" r="32" fill="#1e1b4b" stroke="#38bdf8" stroke-width="2"/>
+    <text x="140" y="-85" font-family="system-ui, sans-serif" font-size="10" font-weight="600" fill="#bae6fd" text-anchor="middle">Vivencia</text>
+
+    <circle cx="-160" cy="30" r="34" fill="#1e1b4b" stroke="#f472b6" stroke-width="2"/>
+    <text x="-160" y="35" font-family="system-ui, sans-serif" font-size="10" font-weight="600" fill="#fbcfe8" text-anchor="middle">Interacción</text>
+
+    <circle cx="160" cy="30" r="34" fill="#1e1b4b" stroke="#34d399" stroke-width="2"/>
+    <text x="160" y="35" font-family="system-ui, sans-serif" font-size="10" font-weight="600" fill="#a7f3d0" text-anchor="middle">Discurso</text>
+
+    <circle cx="-100" cy="110" r="30" fill="#1e1b4b" stroke="#fbbf24" stroke-width="2"/>
+    <text x="-100" y="115" font-family="system-ui, sans-serif" font-size="10" font-weight="600" fill="#fef3c7" text-anchor="middle">Cultura</text>
+
+    <circle cx="100" cy="110" r="30" fill="#1e1b4b" stroke="#60a5fa" stroke-width="2"/>
+    <text x="100" y="115" font-family="system-ui, sans-serif" font-size="10" font-weight="600" fill="#dbeafe" text-anchor="middle">Comprensión</text>
+  </g>
+
+  <!-- Label Badge -->
+  <rect x="230" y="40" width="340" height="42" rx="21" fill="#1e293b" stroke="#c084fc" stroke-width="1.5"/>
+  <text x="400" y="67" font-family="system-ui, sans-serif" font-size="16" font-weight="700" fill="#c084fc" text-anchor="middle">RUTA CUALITATIVA: COMPRENSIÓN Y CONTEXTO</text>
+  
+  <text x="400" y="430" font-family="system-ui, sans-serif" font-size="13" font-weight="500" fill="#94a3b8" text-anchor="middle">
+    Placeholder activo | Reemplazar por img/cualitativo-concept.jpg
+  </text>
+</svg>
+

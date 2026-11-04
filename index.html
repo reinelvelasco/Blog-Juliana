@@ -1,0 +1,1336 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Los Diseños de Investigación Cuantitativos y Cualitativos | Blog Académico</title>
+  
+  <!-- Metadatos de Autor y Contenido Académico -->
+  <meta name="description" content="Blog académico sobre diseños de investigación cuantitativos y cualitativos: tipologías, diferencias, técnicas de recolección y aplicaciones en desarrollo de software y tecnología.">
+  <meta name="author" content="Estudiante de Tecnología en Análisis y Desarrollo de Software">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph para compartir en redes y foros -->
+  <meta property="og:title" content="Los Diseños de Investigación Cuantitativos y Cualitativos">
+  <meta property="og:description" content="Guía académica con fundamentos de Sampieri, comparaciones, técnicas de recolección y artículos científicos reales aplicados a software y tecnología.">
+  <meta property="og:type" content="article">
+
+  <!-- Hoja de estilos principal -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- Barra de progreso de lectura superior -->
+  <div id="reading-progress-bar" class="reading-progress-bar" aria-hidden="true"></div>
+
+  <!-- ========================================================
+       BARRA DE NAVEGACIÓN FIJA Y ACCESIBLE
+       ======================================================== -->
+  <header class="navbar" role="banner">
+    <div class="container navbar-inner">
+      <a href="#inicio" class="navbar-brand" aria-label="Ir al inicio del blog">
+        <span class="navbar-logo-icon" aria-hidden="true">
+          <!-- Ícono de nodo / red metodológica -->
+          <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+        </span>
+        <span>Metodología &amp; Software</span>
+      </a>
+
+      <!-- Menú de navegación principal -->
+      <nav id="navbar-menu" class="navbar-menu" role="navigation" aria-label="Navegación principal">
+        <a href="#inicio" class="nav-link active">Inicio</a>
+        <a href="#introduccion" class="nav-link">Introducción</a>
+        <a href="#cuantitativo" class="nav-link">Ruta Cuantitativa</a>
+        <a href="#cualitativo" class="nav-link">Ruta Cualitativa</a>
+        <a href="#comparacion" class="nav-link">Comparación</a>
+        <a href="#tecnicas" class="nav-link">Técnicas</a>
+        <a href="#articulos" class="nav-link">Artículos</a>
+        <a href="#quiz" class="nav-link">Quiz</a>
+        <a href="#bibliografia" class="nav-link">Bibliografía</a>
+      </nav>
+
+      <!-- Acciones de barra (Contador Disqus y Switch de tema) -->
+      <div class="navbar-actions">
+        <!-- Contador discreto de comentarios de Disqus -->
+        <a href="#disqus_thread" class="nav-comment-badge" data-disqus-identifier="blog-disenos-investigacion" title="Ver comentarios en Disqus">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM6 9h12v2H6V9zm8 5H6v-2h8v2zm4-6H6V6h12v2z"/></svg>
+          <span class="disqus-comment-count" data-disqus-identifier="blog-disenos-investigacion">Comentarios</span>
+        </a>
+
+        <!-- Botón para alternar tema claro / oscuro -->
+        <button id="theme-toggle-btn" class="theme-toggle-btn" type="button" aria-label="Cambiar a modo oscuro" title="Cambiar tema claro/oscuro">
+          <!-- Ícono de sol (para modo claro) -->
+          <svg class="theme-icon-light" viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <!-- Ícono de luna (para modo oscuro) -->
+          <svg class="theme-icon-dark" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+
+        <!-- Botón menú móvil (hamburguesa) -->
+        <button id="mobile-nav-toggle" class="mobile-nav-toggle" type="button" aria-expanded="false" aria-label="Abrir menú de navegación">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ========================================================
+         1. HERO / INICIO
+         ======================================================== -->
+    <section id="inicio" class="hero-section">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="hero-tagline">
+            <span class="badge badge-quant">Ruta Cuantitativa</span>
+            <span class="badge badge-qual">Ruta Cualitativa</span>
+            <span class="badge badge-mixed">Ruta Mixta</span>
+          </div>
+
+          <h1 class="hero-title">
+            Los Diseños de Investigación <span class="highlight-gradient">Científica</span>
+          </h1>
+
+          <p class="hero-subtitle">
+            Comprende los planos estratégicos que guían la generación de conocimiento riguroso: desde experimentos controlados hasta inmersiones etnográficas, ilustrados en contextos de desarrollo de software y tecnología.
+          </p>
+
+          <!-- Perfil académico del autor (Placeholder editable) -->
+          <div class="hero-meta-student">
+            <div class="hero-meta-avatar" aria-hidden="true">AD</div>
+            <div class="hero-meta-text">
+              <span class="author-title">[Nombre del Autor - Estudiante ADSO]</span>
+              <span class="author-sub">Tecnología en Análisis y Desarrollo de Software • Módulo de Metodología de la Investigación</span>
+            </div>
+          </div>
+
+          <div class="hero-cta-group">
+            <a href="#introduccion" class="btn btn-primary">
+              Comenzar Lectura
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </a>
+            <a href="#comparacion" class="btn btn-secondary">
+              Ver Tabla Comparativa
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <!-- ========================================================
+               IMAGEN RECOMENDADA: Portada principal del blog
+               Archivo sugerido: img/hero-portada.jpg (o formato .webp/.png)
+               Medidas recomendadas: 1200 x 630 px (proporción 16:9)
+               Qué buscar en Unsplash/Pexels: "data science technology research", "scientific coding"
+               Para sustituir: cambia src="img/hero-portada.svg" por tu imagen propia.
+               ======================================================== -->
+          <figure class="image-wrapper hero-image-wrapper">
+            <img src="img/hero-portada.svg" alt="Ilustración conceptual de diseños de investigación y metodologías científicas en tecnología" loading="lazy" class="responsive-img">
+            <figcaption class="image-caption">Figura 1: Representación conceptual de los métodos empíricos aplicados al software y a los sistemas de información.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================
+         2. INTRODUCCIÓN METODOLÓGICA
+         ======================================================== -->
+    <section id="introduccion" class="section section-alt">
+      <div class="container">
+        <div class="section-header">
+          <span class="badge">Fundamentos Epistemológicos</span>
+          <h2>¿Qué es un diseño de investigación y por qué es indispensable?</h2>
+          <p>La arquitectura previa que determina la validez, solidez y rigor de cualquier hallazgo científico.</p>
+        </div>
+
+        <div class="card-grid">
+          <article class="card">
+            <div class="card-header-icon icon-quant">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>
+            </div>
+            <h3>El "Plano Arquitectónico" de la Ciencia</h3>
+            <p>
+              Tal como explican <strong>Hernández-Sampieri y Mendoza (2018)</strong>, un diseño de investigación es el <em>plan o estrategia preconcebida</em> que adopta el investigador para obtener la información empírica que le permita responder a sus preguntas de estudio, cumplir con sus objetivos trazados y someter a prueba sus hipótesis.
+            </p>
+            <p>
+              En analogía con el desarrollo de software, el diseño metodológico equivale a la <strong>arquitectura de software</strong>: define la estructura de componentes, los canales de datos y los controles necesarios para que el sistema resultante sea estable, confiable y verificable.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="card-header-icon icon-qual">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+            </div>
+            <h3>Importancia en Software y Tecnología</h3>
+            <p>
+              En el campo de la <strong>Tecnología en Análisis y Desarrollo de Software</strong>, una decisión técnica mal fundamentada cuesta tiempo, dinero y calidad. El diseño de investigación permite responder preguntas críticas:
+            </p>
+            <ul style="margin-left: 1.2rem; color: var(--text-muted); margin-bottom: 1rem;">
+              <li>¿Un nuevo algoritmo de compresión es realmente más rápido o su ventaja se debe al azar? <em>(Ruta Cuantitativa Experimental)</em>.</li>
+              <li>¿Por qué los programadores rechazan una herramienta CASE o se resisten a documentar código? <em>(Ruta Cualitativa Fenomenológica / Etnográfica)</em>.</li>
+            </ul>
+            <p>
+              Sin un diseño apropiado, las conclusiones carecen de <strong>validez interna</strong> (confianza en los vínculos observados) y <strong>validez externa</strong> (capacidad de transferir o generalizar los resultados).
+            </p>
+          </article>
+        </div>
+
+        <div class="callout callout-quant">
+          <div class="callout-title">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+            Premisa de Ñaupas Paitán et al. (2018)
+          </div>
+          <p>
+            "El diseño constituye la matriz directriz de la prueba empírica. No existe una técnica de recolección autosuficiente; su validez depende estrictamente de su coherencia con el diseño seleccionado y el problema formulado" (p. 348).
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================
+         3. RUTA CUANTITATIVA
+         ======================================================== -->
+    <section id="cuantitativo" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="badge badge-quant">Ruta Cuantitativa</span>
+          <h2>Medición Numérica, Control y Comprobación de Hipótesis</h2>
+          <p>
+            Bajo el paradigma postpositivista, la ruta cuantitativa busca explicar, predecir y controlar fenómenos a través de la recolección estructurada de datos y el análisis estadístico deductivo.
+          </p>
+        </div>
+
+        <!-- ========================================================
+             IMAGEN RECOMENDADA: Ruta Cuantitativa
+             Archivo sugerido: img/cuantitativo-concept.jpg
+             Medidas recomendadas: 800 x 500 px (proporción 16:10)
+             Qué buscar en Unsplash: "data analytics dashboard code", "server statistics"
+             Para sustituir: cambia src="img/cuantitativo-concept.svg" por tu imagen.
+             ======================================================== -->
+        <figure class="image-wrapper" style="max-width: 820px; margin: 0 auto 2.5rem;">
+          <img src="img/cuantitativo-concept.svg" alt="Diagrama de medición cuantitativa y análisis de variables estadísticas" loading="lazy" class="responsive-img">
+          <figcaption class="image-caption">Figura 2: Control sistemático, medición objetiva y verificación estadística en la ruta cuantitativa.</figcaption>
+        </figure>
+
+        <!-- Pestañas Interactivas de Diseños Cuantitativos -->
+        <div class="tabs-container">
+          <ul class="tab-nav" role="tablist" aria-label="Tipologías de diseños cuantitativos">
+            <li>
+              <button class="tab-btn active" role="tab" id="tab-btn-exp" aria-selected="true" aria-controls="panel-exp" data-tab="panel-exp">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 2v7.31L4.62 17.5A2 2 0 0 0 6.38 20.5h11.24a2 2 0 0 0 1.76-3L14 9.31V2h-4z"></path><path d="M8.5 2h7"></path><path d="M14 9.3h-4"></path></svg>
+                <span>Diseños Experimentales</span>
+              </button>
+            </li>
+            <li>
+              <button class="tab-btn" role="tab" id="tab-btn-trans" aria-selected="false" aria-controls="panel-trans" data-tab="panel-trans">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                <span>No Experimentales: Transeccionales</span>
+              </button>
+            </li>
+            <li>
+              <button class="tab-btn" role="tab" id="tab-btn-long" aria-selected="false" aria-controls="panel-long" data-tab="panel-long">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline><polyline points="17 6 23 6 23 12"></polyline></svg>
+                <span>No Experimentales: Longitudinales</span>
+              </button>
+            </li>
+          </ul>
+
+          <!-- Panel 1: Experimentales -->
+          <div id="panel-exp" class="tab-panel active" role="tabpanel" aria-labelledby="tab-btn-exp">
+            <div style="margin-bottom: 1.5rem;">
+              <h3>Diseños Experimentales: Manipulación Intencional de Variables</h3>
+              <p>
+                En estos diseños, el investigador manipula intencionalmente una o más <strong>variables independientes (causas)</strong> para analizar sus consecuencias sobre una o más <strong>variables dependientes (efectos)</strong> en una situación de control. Hernández-Sampieri (2018) los subdivide en tres categorías:
+              </p>
+            </div>
+
+            <div class="card-grid-3">
+              <div class="card">
+                <h4>1. Preexperimentos</h4>
+                <p><strong>Control mínimo:</strong> Se administra un estímulo a un solo grupo y se mide una variable (diseño de posprueba única o preprueba-posprueba sin grupo de comparación).</p>
+                <div class="tech-example-box">
+                  <strong>En Software:</strong>
+                  Implementar una nueva librería en un proyecto de clase y medir si los alumnos terminaron más rápido la tarea, sin compararlos contra otro grupo. Su validez es baja, pero sirve como piloto.
+                </div>
+              </div>
+
+              <div class="card">
+                <h4>2. Cuasiexperimentos</h4>
+                <p><strong>Grupos intactos:</strong> Manipulan deliberadamente la variable independiente para ver su efecto, pero los sujetos <em>no se asignan al azar</em>; los grupos ya estaban formados antes del estudio.</p>
+                <div class="tech-example-box">
+                  <strong>En Software:</strong>
+                  Aplicar metodologías ágiles en el salón del turno de la mañana y cascada en el salón de la noche, comparando la calidad de los proyectos de software resultantes.
+                </div>
+              </div>
+
+              <div class="card">
+                <h4>3. Experimentos Puros</h4>
+                <p><strong>Control y validez óptima:</strong> Reúnen dos requisitos clave: manipulación intencional y <em>asignación completamente aleatoria</em> de los sujetos a grupos de control y experimental.</p>
+                <div class="tech-example-box">
+                  <strong>En Software:</strong>
+                  Tomar 100 programadores, sortear al azar 50 para usar Copilot IA y 50 para codificar manualmente, midiendo tasas de defectos por cada mil líneas de código (KLOC).
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Panel 2: Transeccionales -->
+          <div id="panel-trans" class="tab-panel" role="tabpanel" aria-labelledby="tab-btn-trans" hidden>
+            <div style="margin-bottom: 1.5rem;">
+              <h3>Diseños Transeccionales o Transversales: La "Fotografía" Temporal</h3>
+              <p>
+                Recolectan datos en un <strong>único momento en el tiempo</strong>. Su propósito es describir variables o analizar su incidencia e interrelación en un momento dado, sin manipularlas.
+              </p>
+            </div>
+
+            <div class="card-grid-3">
+              <div class="card">
+                <h4>Exploratorios</h4>
+                <p>Se aplican a problemas nuevos o poco conocidos. Comienzan a identificar variables potenciales que serán analizadas posteriormente.</p>
+                <div class="tech-example-box">
+                  <strong>Ejemplo:</strong> Sondear por primera vez cuántas empresas locales de software conocen y planean adoptar tecnologías de computación cuántica.
+                </div>
+              </div>
+
+              <div class="card">
+                <h4>Descriptivos</h4>
+                <p>Indagan la frecuencia, porcentaje o nivel promedio de una o más variables en una población definida, de forma independiente.</p>
+                <div class="tech-example-box">
+                  <strong>Ejemplo:</strong> Medir la distribución de lenguajes de programación (Java, Python, C#, TypeScript) utilizados en empresas de Bogotá en 2026.
+                </div>
+              </div>
+
+              <div class="card">
+                <h4>Correlacionales-Causales</h4>
+                <p>Describen relaciones entre dos o más variables o evalúan modelos causa-efecto en un instante específico sin intervención experimental.</p>
+                <div class="tech-example-box">
+                  <strong>Ejemplo:</strong> Determinar si existe correlación estadística entre la cobertura de pruebas unitarias (%) y la satisfacción final del cliente de software.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Panel 3: Longitudinales -->
+          <div id="panel-long" class="tab-panel" role="tabpanel" aria-labelledby="tab-btn-long" hidden>
+            <div style="margin-bottom: 1.5rem;">
+              <h3>Diseños Longitudinales o Evolutivos: La "Película" Temporal</h3>
+              <p>
+                Recolectan datos a través de diversos puntos en el tiempo para examinar cambios en las variables, sus relaciones y sus causas o consecuencias evolutivas.
+              </p>
+            </div>
+
+            <div class="card-grid-3">
+              <div class="card">
+                <h4>De Tendencia (Trend)</h4>
+                <p>Analizan cambios a través del tiempo en una <strong>población general</strong>. Los sujetos específicos evaluados en cada medición son diferentes, pero pertenecen a la misma población global.</p>
+                <div class="tech-example-box">
+                  <strong>Ejemplo:</strong> Evaluar anualmente de 2020 a 2026 el salario promedio de los desarrolladores junior en Colombia con muestras independientes cada año.
+                </div>
+              </div>
+
+              <div class="card">
+                <h4>De Evolución de Grupo (Cohorte)</h4>
+                <p>Examinan cambios a través del tiempo en subpoblaciones específicas unidas por una característica o experiencia temporal compartida (como el año de ingreso o graduación).</p>
+                <div class="tech-example-box">
+                  <strong>Ejemplo:</strong> Medir el avance salarial y de cargo de los egresados de la promoción 2022 de ADSO a los 1, 3 y 5 años posteriores a su graduación.
+                </div>
+              </div>
+
+              <div class="card">
+                <h4>De Panel</h4>
+                <p>El <strong>mismo grupo exacto de participantes</strong> es medido y monitoreado en todos y cada uno de los momentos temporales evaluados.</p>
+                <div class="tech-example-box">
+                  <strong>Ejemplo:</strong> Hacer seguimiento a los mismos 25 ingenieros de una empresa durante 2 años, midiendo su estrés y productividad cada trimestre tras migrar a trabajo remoto.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================
+         4. RUTA CUALITATIVA
+         ======================================================== -->
+    <section id="cualitativo" class="section section-alt">
+      <div class="container">
+        <div class="section-header">
+          <span class="badge badge-qual">Ruta Cualitativa</span>
+          <h2>Inmersión Contextual, Inducción y Significado Humano</h2>
+          <p>
+            La ruta cualitativa no busca medir numéricamente variables aisladas, sino comprender la complejidad de las vivencias, culturas, prácticas cotidianas y percepciones de los actores en su entorno natural.
+          </p>
+        </div>
+
+        <!-- ========================================================
+             IMAGEN RECOMENDADA: Ruta Cualitativa
+             Archivo sugerido: img/cualitativo-concept.jpg
+             Medidas recomendadas: 800 x 500 px
+             Qué buscar en Unsplash: "ux research user interview", "software developers meeting"
+             Para sustituir: cambia src="img/cualitativo-concept.svg" por tu imagen.
+             ======================================================== -->
+        <figure class="image-wrapper" style="max-width: 820px; margin: 0 auto 2.5rem;">
+          <img src="img/cualitativo-concept.svg" alt="Red conceptual de significados y vivencias en la ruta cualitativa" loading="lazy" class="responsive-img">
+          <figcaption class="image-caption">Figura 3: Enfoque holístico, inductivo y contextual propio de los abordajes cualitativos.</figcaption>
+        </figure>
+
+        <p style="margin-bottom: 2rem;">
+          En el enfoque cualitativo, según <strong>Hernández-Sampieri y Mendoza (2018)</strong>, los diseños son abiertos, flexibles y emergentes; no se cierran de manera rígida antes de ingresar al campo de estudio. Explora a continuación los 6 diseños cualitativos más reconocidos:
+        </p>
+
+        <!-- Acordeón Interactivo de Diseños Cualitativos -->
+        <div class="accordion" role="region" aria-label="Tipologías de diseños cualitativos">
+          <!-- 1. Teoría Fundamentada -->
+          <div class="accordion-item open">
+            <button class="accordion-header" type="button" aria-expanded="true">
+              <span class="accordion-title-group">
+                <span class="badge badge-qual">Grounded Theory</span>
+                1. Teoría Fundamentada
+              </span>
+              <svg class="accordion-icon-toggle" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="accordion-content">
+              <p>
+                Propuesta originariamente por Glaser y Strauss (y desarrollada por Corbin y Charmaz), su propósito es <strong>construir inductivamente una teoría o marco conceptual explicativo</strong> anclado directamente en los datos empíricos recopilados de los participantes, en lugar de contrastar teorías preexistentes.
+              </p>
+              <p>
+                Utiliza el <em>método de comparación constante</em> a través de tres niveles de codificación: <strong>codificación abierta</strong> (descomposición inicial del texto y asignación de etiquetas), <strong>codificación axial</strong> (agrupación en categorías y subcategorías vinculadas) y <strong>codificación selectiva</strong> (determinación de la categoría central o medular).
+              </p>
+              <div class="tech-example-box">
+                <strong>Aplicación en Software:</strong>
+                Realizar entrevistas en profundidad a desarrolladores de microempresas para modelar una teoría sustantiva sobre cómo gestionan la deuda técnica bajo presupuestos reducidos y clientes demandantes.
+              </div>
+            </div>
+          </div>
+
+          <!-- 2. Diseños Etnográficos -->
+          <div class="accordion-item">
+            <button class="accordion-header" type="button" aria-expanded="false">
+              <span class="accordion-title-group">
+                <span class="badge badge-qual">Cultura &amp; Comunidad</span>
+                2. Diseños Etnográficos
+              </span>
+              <svg class="accordion-icon-toggle" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="accordion-content">
+              <p>
+                Tienen como objetivo describir, interpretar y aprender la cultura, rituales, jerga, símbolos y normas de interacción social de un grupo o comunidad determinado. Requiere una prolongada inmersión del investigador en el campo de estudio a través de la observación participante y notas de campo.
+              </p>
+              <p>
+                Hoy en día destaca la <strong>etnografía virtual o netnografía</strong>, que traslada este método al ciberespacio para analizar subculturas que interactúan en plataformas digitales y comunidades tecnológicas.
+              </p>
+              <div class="tech-example-box">
+                <strong>Aplicación en Software:</strong>
+                Infiltrarse como colaborador activo en la comunidad open source de Linux o de un framework en GitHub para registrar durante 6 meses cómo se resuelven las disputas de código y la jerarquía entre mantenedores y contribuidores externos.
+              </div>
+            </div>
+          </div>
+
+          <!-- 3. Diseños Narrativos -->
+          <div class="accordion-item">
+            <button class="accordion-header" type="button" aria-expanded="false">
+              <span class="accordion-title-group">
+                <span class="badge badge-qual">Biografía &amp; Relato</span>
+                3. Diseños Narrativos
+              </span>
+              <svg class="accordion-icon-toggle" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="accordion-content">
+              <p>
+                El investigador recolecta datos sobre las historias de vida, secuencias de hechos y experiencias individuales de personas clave para reconstruir una narrativa cronológica que dé cuenta de transformaciones, significados y aprendizajes.
+              </p>
+              <p>
+                Pueden ser autobiográficos, biográficos o testimonios de episodios específicos (historias de vida tópicas).
+              </p>
+              <div class="tech-example-box">
+                <strong>Aplicación en Software:</strong>
+                Reconstruir la trayectoria y vivencias de mujeres pioneras en la industria del software en América Latina para documentar las barreras culturales y estrategias de superación que moldearon su carrera tecnológica.
+              </div>
+            </div>
+          </div>
+
+          <!-- 4. Diseños Fenomenológicos -->
+          <div class="accordion-item">
+            <button class="accordion-header" type="button" aria-expanded="false">
+              <span class="accordion-title-group">
+                <span class="badge badge-qual">Vivencia Común</span>
+                4. Diseños Fenomenológicos
+              </span>
+              <svg class="accordion-icon-toggle" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="accordion-content">
+              <p>
+                Se enfocan en <strong>identificar la esencia común</strong> de las experiencias compartidas por varios individuos frente a un fenómeno específico. El investigador busca describir "qué" experimentaron los participantes y "cómo" lo vivieron subjetivamente, abstrayendo prejuicios mediante la <em>epojé</em> (suspensión temporal del juicio).
+              </p>
+              <div class="tech-example-box">
+                <strong>Aplicación en Software:</strong>
+                Explorar cómo experimentan el síndrome del impostor y el estrés cognitivo los programadores junior al enfrentarse a su primera revisión de código (pull request review) en un entorno de trabajo corporativo internacional.
+              </div>
+            </div>
+          </div>
+
+          <!-- 5. Investigación-Acción (IA) -->
+          <div class="accordion-item">
+            <button class="accordion-header" type="button" aria-expanded="false">
+              <span class="accordion-title-group">
+                <span class="badge badge-qual">Transformación Social</span>
+                5. Investigación-Acción
+              </span>
+              <svg class="accordion-icon-toggle" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="accordion-content">
+              <p>
+                Su finalidad es <strong>resolver problemáticas prácticas cotidianas</strong> de una comunidad u organización y simultáneamente generar conocimiento transformador. Los miembros de la comunidad son co-investigadores activos.
+              </p>
+              <p>
+                Opera mediante <em>ciclos en espiral</em>: (1) Detección y diagnóstico del problema, (2) Planificación de la intervención, (3) Acción/implementación y observación de resultados, y (4) Reflexión compartida para reajustar el siguiente ciclo.
+              </p>
+              <div class="tech-example-box">
+                <strong>Aplicación en Software:</strong>
+                Un equipo docente-estudiantil que investiga cómo reducir la tasa de deserción en los primeros módulos de programación, implementando ciclos iterativos con talleres de programación en bloques (Scratch) y evaluando colaborativamente el impacto tras cada sesión.
+              </div>
+            </div>
+          </div>
+
+          <!-- 6. Estudios de Caso Cualitativos -->
+          <div class="accordion-item">
+            <button class="accordion-header" type="button" aria-expanded="false">
+              <span class="accordion-title-group">
+                <span class="badge badge-qual">Sistemas Delimitados</span>
+                6. Estudios de Caso
+              </span>
+              <svg class="accordion-icon-toggle" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="accordion-content">
+              <p>
+                De acuerdo con referentes como Robert Stake y Robert Yin, es el estudio en profundidad y contextualizado de una entidad contemporánea o "caso" específico y delimitado (un proyecto, una organización, un incidente crítico o una comunidad).
+              </p>
+              <p>
+                Pueden ser <strong>intrínsecos</strong> (interesa el caso particular por su singularidad) o <strong>instrumentales</strong> (el caso se utiliza como medio para iluminar un tema general o refinar un concepto).
+              </p>
+              <div class="tech-example-box">
+                <strong>Aplicación en Software:</strong>
+                Analizar a fondo el caso de una entidad bancaria regional que sufrió una caída crítica de sus servicios durante la migración hacia una arquitectura basada en microservicios, examinando bitácoras de incidentes y testimonios de los ingenieros líderes.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================
+         5. COMPARACIÓN DIRECTA Y RUTA MIXTA
+         ======================================================== -->
+    <section id="comparacion" class="section">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="badge">Matriz Metodológica</span>
+          <h2>Comparación Directa: Cuantitativo vs. Cualitativo</h2>
+          <p>
+            Comprender las diferencias epistemológicas y operativas es clave para elegir el diseño adecuado según el problema de estudio.
+          </p>
+        </div>
+
+        <!-- ========================================================
+             IMAGEN RECOMENDADA: Comparación de Métodos
+             Archivo sugerido: img/comparacion-metodos.jpg
+             Medidas recomendadas: 800 x 450 px
+             Qué buscar en Unsplash: "scientific balance", "comparison technology"
+             Para sustituir: cambia src="img/comparacion-metodos.svg" por tu imagen.
+             ======================================================== -->
+        <figure class="image-wrapper" style="max-width: 820px; margin: 0 auto 2.5rem;">
+          <img src="img/comparacion-metodos.svg" alt="Infografía comparativa entre los enfoques cuantitativo y cualitativo" loading="lazy" class="responsive-img">
+          <figcaption class="image-caption">Figura 4: Síntesis comparativa de las dos rutas epistemológicas fundamentales.</figcaption>
+        </figure>
+
+        <!-- TABLA EN ESCRITORIO -->
+        <div class="comparison-container">
+          <table class="comparison-table" aria-label="Tabla comparativa de rutas cuantitativa y cualitativa">
+            <thead>
+              <tr>
+                <th scope="col" style="width: 20%;">Criterio Metodológico</th>
+                <th scope="col" class="quant-col" style="width: 40%;">Ruta Cuantitativa</th>
+                <th scope="col" class="qual-col" style="width: 40%;">Ruta Cualitativa</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="criteria-cell">Premisa Epistemológica</td>
+                <td>Positivismo / Pospositivismo. Existe una realidad objetiva externa que se puede medir y conocer con independencia del investigador.</td>
+                <td>Fenomenología, constructivismo y hermenéutica. Existen realidades múltiples subjetivas co-construidas en el contexto social.</td>
+              </tr>
+              <tr>
+                <td class="criteria-cell">Lógica del Razonamiento</td>
+                <td><strong>Deductiva:</strong> Va de lo general (teorías y leyes) a lo particular (datos empíricos para probar hipótesis).</td>
+                <td><strong>Inductiva:</strong> Va de lo particular (datos y vivencias individuales) a lo general (conceptos y marcos teóricos emergentes).</td>
+              </tr>
+              <tr>
+                <td class="criteria-cell">Rol de las Hipótesis</td>
+                <td>Se formulan <strong>antes</strong> de recolectar los datos para ser probadas o rechazadas estadísticamente.</td>
+                <td>Se generan y afinan <strong>durante</strong> el proceso de inmersión y recolección; son hipótesis de trabajo emergentes.</td>
+              </tr>
+              <tr>
+                <td class="criteria-cell">Muestreo y Sujetos</td>
+                <td>Muestras probabilísticas o dirigidas, generalmente amplias, con intención de <strong>representatividad estadística</strong> y generalización.</td>
+                <td>Muestras intencionales no probabilísticas, orientadas a la riqueza de significados y profundidad, reguladas por <strong>saturación teórica</strong>.</td>
+              </tr>
+              <tr>
+                <td class="criteria-cell">Naturaleza de los Datos</td>
+                <td>Numéricos, métricas, frecuencias, tiempos, conteos y escalas estandarizadas analizables estadísticamente.</td>
+                <td>Textos narrativos, transcripciones de audio, videos, observaciones de campo, reflexiones y artefactos semánticos.</td>
+              </tr>
+              <tr>
+                <td class="criteria-cell">Estructura del Diseño</td>
+                <td>Estructurado, planificado de antemano de manera rígida; cualquier alteración altera la validez del experimento.</td>
+                <td>Abierto, maleable y adaptativo; se moldea y ajusta conforme el investigador interactúa con los participantes en campo.</td>
+              </tr>
+              <tr>
+                <td class="criteria-cell">Criterios de Rigor</td>
+                <td>Validez interna, validez externa, confiabilidad y objetividad.</td>
+                <td>Credibilidad, transferibilidad, consistencia (dependencia) y confirmabilidad (auditoría).</td>
+              </tr>
+              <tr>
+                <td class="criteria-cell">Aplicación en Software</td>
+                <td>Pruebas de estrés y benchmarking de servidores, comparación de tiempos de compilación o correlación de bugs y complejidad.</td>
+                <td>Entrevistas sobre resistencia a marcos ágiles, etnografía de comunidades de software libre o ergonomía de experiencia de usuario (UX).</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- TARJETAS EN CELULAR (Responsivo para pantallas pequeñas) -->
+        <div class="mobile-comparison-cards">
+          <div class="mobile-comp-card">
+            <h3 class="mobile-comp-title">1. Premisa Epistemológica</h3>
+            <div class="mobile-comp-side">
+              <span class="mobile-side-label mobile-side-quant">Cuantitativo</span>
+              <p>Positivista. La realidad es externa, medible e independiente del investigador.</p>
+            </div>
+            <div class="mobile-comp-side">
+              <span class="mobile-side-label mobile-side-qual">Cualitativo</span>
+              <p>Constructivista. Realidades subjetivas contextuales construidas por los participantes.</p>
+            </div>
+          </div>
+
+          <div class="mobile-comp-card">
+            <h3 class="mobile-comp-title">2. Lógica del Razonamiento</h3>
+            <div class="mobile-comp-side">
+              <span class="mobile-side-label mobile-side-quant">Cuantitativo</span>
+              <p>Deductivo: De teorías y reglas generales hacia la contrastación de datos empíricos.</p>
+            </div>
+            <div class="mobile-comp-side">
+              <span class="mobile-side-label mobile-side-qual">Cualitativo</span>
+              <p>Inductivo: De relatos y datos contextuales específicos hacia patrones teóricos emergentes.</p>
+            </div>
+          </div>
+
+          <div class="mobile-comp-card">
+            <h3 class="mobile-comp-title">3. Papel de la Hipótesis</h3>
+            <div class="mobile-comp-side">
+              <span class="mobile-side-label mobile-side-quant">Cuantitativo</span>
+              <p>Se formulan antes de recoger datos para probarlas mediante contraste estadístico.</p>
+            </div>
+            <div class="mobile-comp-side">
+              <span class="mobile-side-label mobile-side-qual">Cualitativo</span>
+              <p>Emergen de manera progresiva conforme avanza la investigación en el campo.</p>
+            </div>
+          </div>
+
+          <div class="mobile-comp-card">
+            <h3 class="mobile-comp-title">4. Naturaleza de los Datos</h3>
+            <div class="mobile-comp-side">
+              <span class="mobile-side-label mobile-side-quant">Cuantitativo</span>
+              <p>Métricas numéricas, tiempos, escalas y estadísticas exactas.</p>
+            </div>
+            <div class="mobile-comp-side">
+              <span class="mobile-side-label mobile-side-qual">Cualitativo</span>
+              <p>Narrativas, discursos de entrevistas, observaciones de campo y significados sociales.</p>
+            </div>
+          </div>
+
+          <div class="mobile-comp-card">
+            <h3 class="mobile-comp-title">5. En Desarrollo de Software</h3>
+            <div class="mobile-comp-side">
+              <span class="mobile-side-label mobile-side-quant">Cuantitativo</span>
+              <p>Métricas de cobertura de código, latencias de peticiones API y encuestas de usabilidad.</p>
+            </div>
+            <div class="mobile-comp-side">
+              <span class="mobile-side-label mobile-side-qual">Cualitativo</span>
+              <p>Retrospectivas Scrum, dinámicas de equipo, cultura de desarrollo y pruebas de usabilidad guiadas.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mención de la Ruta Mixta -->
+        <div class="card" style="margin-top: 2.5rem; border-top: 4px solid var(--color-mixed);">
+          <div class="card-header-icon icon-mixed">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9v-2h2v2zm0-4H9V7h2v5zm4 4h-2v-6h2v6zm0-8h-2V7h2v1z"/></svg>
+          </div>
+          <h3>La Ruta Mixta: Lo Mejor de Ambos Mundos</h3>
+          <p>
+            Tal como señalan <strong>Hernández-Sampieri y Mendoza (2018)</strong>, los <em>métodos mixtos</em> integran de manera sistemática los enfoques cuantitativo y cualitativo en un mismo estudio para obtener una comprensión más integral del problema.
+          </p>
+          <div class="card-grid" style="margin-top: 1.2rem;">
+            <div>
+              <h4>Diseño Convergente Triangulado</h4>
+              <p>Se recolectan datos cuantitativos y cualitativos en paralelo para comparar y contrastar si ambas fuentes apuntan a las mismas conclusiones.</p>
+            </div>
+            <div>
+              <h4>Diseño Secuencial Explicativo</h4>
+              <p>Primero se recogen y analizan datos cuantitativos (ej. telemetría de errores en producción) y luego se profundiza con cualitativos (entrevistas a usuarios afectados) para explicar los porqués numéricos.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================
+         6. TÉCNICAS E INSTRUMENTOS DE RECOLECCIÓN
+         ======================================================== -->
+    <section id="tecnicas" class="section section-alt">
+      <div class="container">
+        <div class="section-header">
+          <span class="badge">Instrumentación Científica</span>
+          <h2>Técnicas e Instrumentos de Recolección de Datos</h2>
+          <p>
+            Las herramientas operativas que permiten capturar la evidencia empírica. Cada técnica responde a un propósito específico y tiene fortalezas y restricciones metodológicas.
+          </p>
+        </div>
+
+        <!-- ========================================================
+             IMAGEN RECOMENDADA: Técnicas e Instrumentos
+             Archivo sugerido: img/tecnicas-recoleccion.jpg
+             Medidas recomendadas: 800 x 450 px
+             Qué buscar en Unsplash: "survey feedback form", "user testing observation"
+             Para sustituir: cambia src="img/tecnicas-recoleccion.svg" por tu imagen.
+             ======================================================== -->
+        <figure class="image-wrapper" style="max-width: 820px; margin: 0 auto 2.5rem;">
+          <img src="img/tecnicas-recoleccion.svg" alt="Ilustración de las cinco técnicas principales de recolección de datos" loading="lazy" class="responsive-img">
+          <figcaption class="image-caption">Figura 5: Panorama de las cinco técnicas e instrumentos fundamentales de investigación empírica.</figcaption>
+        </figure>
+
+        <div class="card-grid">
+          <!-- 1. Encuestas / Cuestionarios -->
+          <article class="card technique-card">
+            <div>
+              <span class="badge badge-quant">Cuantitativa</span>
+              <h3>1. Encuestas y Cuestionarios</h3>
+              <p>Conjunto sistemático de preguntas estandarizadas (cerradas o tipo Likert) aplicadas a una muestra para medir actitudes, conocimientos o hechos.</p>
+              
+              <ul class="tech-detail-list">
+                <li><strong>¿Cuándo usarla?:</strong> Cuando se requiere medir variables de forma estandarizada y generalizable en muestras poblacionales medianas o grandes.</li>
+                <li><strong>Ventaja:</strong> Alta eficiencia para procesar datos estadísticos, bajo costo por participante y facilidad de automatización digital.</li>
+                <li><strong>Limitación:</strong> Rigidez; no permite profundizar en motivos subyacentes ni aclarar ambigüedades si la pregunta fue mal redactada.</li>
+              </ul>
+            </div>
+            <div class="tech-example-box">
+              <strong>Caso en Software:</strong>
+              Aplicar un cuestionario estandarizado basado en el modelo TAM (Technology Acceptance Model) a 300 usuarios para medir la intención de adopción de un nuevo CRM empresarial.
+            </div>
+          </article>
+
+          <!-- 2. Entrevistas -->
+          <article class="card technique-card">
+            <div>
+              <span class="badge badge-qual">Cualitativa</span>
+              <h3>2. Entrevistas en Profundidad</h3>
+              <p>Conversación dialógica estructurada o semiestructurada entre el investigador y el informante clave para explorar significados, opiniones y motivos.</p>
+              
+              <ul class="tech-detail-list">
+                <li><strong>¿Cuándo usarla?:</strong> Cuando el problema de investigación demanda comprender vivencias íntimas, decisiones complejas o procesos no estandarizados.</li>
+                <li><strong>Ventaja:</strong> Gran flexibilidad para repreguntar, aclarar dudas y captar matices emocionales y verbales del participante.</li>
+                <li><strong>Limitación:</strong> Consume mucho tiempo de transcripción y análisis; riesgo de sesgo introducido involuntariamente por el entrevistador.</li>
+              </ul>
+            </div>
+            <div class="tech-example-box">
+              <strong>Caso en Software:</strong>
+              Entrevistar semiestructuradamente a 8 arquitectos de software senior para comprender las razones estratégicas y temores que los llevaron a migrar de monolito a microservicios.
+            </div>
+          </article>
+
+          <!-- 3. Observación -->
+          <article class="card technique-card">
+            <div>
+              <span class="badge badge-mixed">Cuantitativa / Cualitativa</span>
+              <h3>3. Observación Sistemática</h3>
+              <p>Registro intencional y atento de comportamientos, hechos y secuencias en su contexto natural (puede ser estructurada con guía de cotejo o participante inmersiva).</p>
+              
+              <ul class="tech-detail-list">
+                <li><strong>¿Cuándo usarla?:</strong> Cuando los participantes no recuerdan con precisión lo que hacen o cuando se desea estudiar la interacción real en vivo.</li>
+                <li><strong>Ventaja:</strong> Proporciona evidencia directa de la conducta en tiempo real, sin depender de lo que el sujeto dice hacer.</li>
+                <li><strong>Limitación:</strong> El "efecto reactivo" (los individuos pueden alterar su conducta habitual si se perciben observados).</li>
+              </ul>
+            </div>
+            <div class="tech-example-box">
+              <strong>Caso en Software:</strong>
+              Observar y grabar sesiones de pruebas de usabilidad donde 10 usuarios interactúan con una pasarela de pagos para registrar vacilaciones y patrones oculares de navegación.
+            </div>
+          </article>
+
+          <!-- 4. Grupos Focales -->
+          <article class="card technique-card">
+            <div>
+              <span class="badge badge-qual">Cualitativa</span>
+              <h3>4. Grupos Focales (Focus Groups)</h3>
+              <p>Sesiones guiadas por un moderador con un colectivo de 6 a 10 personas para generar debate, contraste y co-construcción de ideas sobre un tema central.</p>
+              
+              <ul class="tech-detail-list">
+                <li><strong>¿Cuándo usarla?:</strong> Al evaluar reacciones a prototipos tempranos, consensos grupales o contrastar puntos de vista entre distintos perfiles.</li>
+                <li><strong>Ventaja:</strong> Efecto sinérgico: el comentario de un participante detona ideas y reflexiones espontáneas en los demás integrantes.</li>
+                <li><strong>Limitación:</strong> Riesgo de pensamiento de grupo (individuos tímidos silenciados por líderes de opinión dominantes).</li>
+              </ul>
+            </div>
+            <div class="tech-example-box">
+              <strong>Caso en Software:</strong>
+              Reunir a desarrolladores frontend, backend y diseñadores UI en una mesa redonda para analizar colaborativamente los cuellos de botella del diseño de una API interna.
+            </div>
+          </article>
+
+          <!-- 5. Revisión Documental y Artefactos -->
+          <article class="card technique-card">
+            <div>
+              <span class="badge badge-mixed">Cuantitativa / Cualitativa</span>
+              <h3>5. Análisis Documental y de Artefactos</h3>
+              <p>Examen riguroso de registros ya existentes: documentos organizacionales, bitácoras, registros de commits, pull requests, logs del sistema y tickets de soporte.</p>
+              
+              <ul class="tech-detail-list">
+                <li><strong>¿Cuándo usarla?:</strong> Para contrastar discursos con evidencia dura histórica sin requerir el tiempo de los sujetos investigados.</li>
+                <li><strong>Ventaja:</strong> Datos no reactivos (fueron creados antes del estudio) y altamente precisos para rastreo temporal de hechos.</li>
+                <li><strong>Limitación:</strong> La documentación puede estar incompleta, fragmentada o sesgada según las políticas internas de la entidad generadora.</li>
+              </ul>
+            </div>
+            <div class="tech-example-box">
+              <strong>Caso en Software:</strong>
+              Analizar 5.000 commits en un repositorio de GitHub para evaluar si la introducción de herramientas de integración continua redujo los comentarios de rechazo en revisiones de código.
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================
+         7. EJEMPLOS DE INVESTIGACIONES REALES (2016-2026)
+         ======================================================== -->
+    <section id="articulos" class="section">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="badge">Evidencia Científica Real</span>
+          <h2>Artículos de Investigación Publicados (2016 - 2026)</h2>
+          <p>
+            Investigaciones verificadas en bases de datos académicas (SciELO, Redalyc, Dialnet) orientadas a tecnología, software y educación que ilustran cada diseño.
+          </p>
+        </div>
+
+        <!-- Botones de filtro de artículos -->
+        <div class="articles-filter-nav">
+          <button class="btn btn-secondary btn-sm filter-btn active" data-filter="all">Todos los Artículos (6)</button>
+          <button class="btn btn-secondary btn-sm filter-btn" data-filter="cuantitativo">Diseños Cuantitativos (3)</button>
+          <button class="btn btn-secondary btn-sm filter-btn" data-filter="cualitativo">Diseños Cualitativos (3)</button>
+        </div>
+
+        <div class="card-grid">
+          <!-- CUANTITATIVO 1: Instrumental / Transeccional (Educare / SciELO) -->
+          <article class="card article-card quant-border" data-category="cuantitativo">
+            <div class="article-header">
+              <div class="article-badges-row">
+                <span class="badge badge-quant">Cuantitativo</span>
+                <span class="badge">Transeccional Instrumental</span>
+                <span class="badge">SciELO Costa Rica</span>
+              </div>
+              <h3 class="article-title">Validación del cuestionario de competencia digital docente en profesorado universitario chileno</h3>
+              <p class="article-authors"><strong>Autores:</strong> Riquelme-Plaza, I., Cabero-Almenara, J., &amp; Marín-Díaz, V. (2022)</p>
+              <p class="article-journal">Revista Electrónica Educare, 26(1), 222-240.</p>
+            </div>
+            <div>
+              <p class="article-meta-field"><strong>Técnica/Instrumento:</strong> Cuestionario estructurado con escala tipo Likert aplicado a 1.122 docentes universitarios; análisis factorial confirmatorio y Alfa de Cronbach.</p>
+              <div class="article-justification">
+                <strong>¿Por qué ilustra este diseño?:</strong>
+                Es no experimental transeccional de corte psicométrico porque recolecta datos numéricos en un único corte temporal para modelar matemáticamente las dimensiones de una competencia tecnológica, sin intervenir artificialmente la población.
+              </div>
+            </div>
+            <div class="article-footer">
+              <a href="https://doi.org/10.15359/ree.26-1.12" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
+                Leer Artículo en SciELO
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- CUANTITATIVO 2: Cuasiexperimental (Pixel-Bit / Redalyc) -->
+          <article class="card article-card quant-border" data-category="cuantitativo">
+            <div class="article-header">
+              <div class="article-badges-row">
+                <span class="badge badge-quant">Cuantitativo</span>
+                <span class="badge">Cuasiexperimental</span>
+                <span class="badge">Redalyc / Dialnet</span>
+              </div>
+              <h3 class="article-title">Desarrollo del pensamiento algorítmico con el apoyo de objetos de aprendizaje generativos</h3>
+              <p class="article-authors"><strong>Autores:</strong> Guerrero Posadas, M., &amp; García Orozco, J. (2016)</p>
+              <p class="article-journal">Píxel-Bit. Revista de Medios y Educación, (49), 163-175.</p>
+            </div>
+            <div>
+              <p class="article-meta-field"><strong>Técnica/Instrumento:</strong> Pruebas objetivas de desempeño en programación y lógica algorítmica aplicadas con pretest y postest en grupos intactos de estudiantes de ingeniería en sistemas.</p>
+              <div class="article-justification">
+                <strong>¿Por qué ilustra este diseño?:</strong>
+                Manipula deliberadamente la variable independiente (uso de software interactivo generativo vs. instrucción tradicional) pero sobre aulas preestablecidas sin asignación aleatoria individual, midiendo la ganancia de aprendizaje.
+              </div>
+            </div>
+            <div class="article-footer">
+              <a href="https://doi.org/10.12795/pixelbit.2016.i49.11" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
+                Leer Artículo en Dialnet
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- CUANTITATIVO 3: Correlacional-Causal (CIENCIA ergo-sum / Redalyc) -->
+          <article class="card article-card quant-border" data-category="cuantitativo">
+            <div class="article-header">
+              <div class="article-badges-row">
+                <span class="badge badge-quant">Cuantitativo</span>
+                <span class="badge">Transeccional Correlacional</span>
+                <span class="badge">Redalyc</span>
+              </div>
+              <h3 class="article-title">Factores que influyen en la adopción de sistemas de información en las MiPyMes</h3>
+              <p class="article-authors"><strong>Autores:</strong> Sánchez Sánchez, M. I., Meraz Ruiz, L., &amp; Martínez Rodríguez, R. A. (2021)</p>
+              <p class="article-journal">CIENCIA ergo-sum, 28(4), 1-14.</p>
+            </div>
+            <div>
+              <p class="article-meta-field"><strong>Técnica/Instrumento:</strong> Encuesta estructurada basada en el modelo TOE (Technology, Organization, Environment) y modelamiento estadístico de regresión correlacional.</p>
+              <div class="article-justification">
+                <strong>¿Por qué ilustra este diseño?:</strong>
+                Recopila datos numéricos en una sola medición para cuantificar el grado de correlación causal entre variables tecnológicas, organizacionales y la decisión gerencial de adoptar software empresarial.
+              </div>
+            </div>
+            <div class="article-footer">
+              <a href="https://doi.org/10.30878/ces.v28n4a7" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
+                Leer Artículo en Redalyc
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- CUALITATIVO 1: Estudio de Caso (TecnoLógicas / SciELO) -->
+          <article class="card article-card qual-border" data-category="cualitativo">
+            <div class="article-header">
+              <div class="article-badges-row">
+                <span class="badge badge-qual">Cualitativo</span>
+                <span class="badge">Estudio de Caso Múltiple</span>
+                <span class="badge">SciELO Colombia</span>
+              </div>
+              <h3 class="article-title">Desafíos de colaboración en la adopción de Scrum en equipos de software</h3>
+              <p class="article-authors"><strong>Autores:</strong> Muñoz, I. C., Collazos, C. A., &amp; Hurtado, J. A. (2024)</p>
+              <p class="article-journal">TecnoLógicas, 27(59), e2749.</p>
+            </div>
+            <div>
+              <p class="article-meta-field"><strong>Técnica/Instrumento:</strong> Entrevistas semiestructuradas a líderes de desarrollo, análisis temático cualitativo y categorización de dimensiones de interacción interpersonal.</p>
+              <div class="article-justification">
+                <strong>¿Por qué ilustra este diseño?:</strong>
+                Examina un caso delimitado y contemporáneo (pequeños equipos de desarrollo en Colombia) analizando los obstáculos culturales y comunicativos que emergen al adoptar ceremonias de desarrollo ágil en su entorno de trabajo real.
+              </div>
+            </div>
+            <div class="article-footer">
+              <a href="https://doi.org/10.22430/22565337.2749" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
+                Leer Artículo en SciELO
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- CUALITATIVO 2: Etnografía Virtual (Praxis & Saber / Redalyc) -->
+          <article class="card article-card qual-border" data-category="cualitativo">
+            <div class="article-header">
+              <div class="article-badges-row">
+                <span class="badge badge-qual">Cualitativo</span>
+                <span class="badge">Etnografía Virtual</span>
+                <span class="badge">Redalyc / SciELO</span>
+              </div>
+              <h3 class="article-title">La etnografía educativa virtual y la formación de docentes mediada por TIC</h3>
+              <p class="article-authors"><strong>Autores:</strong> Gutiérrez Giraldo, M. C., Agudelo Cely, N., &amp; Caro, E. O. (2016)</p>
+              <p class="article-journal">Praxis &amp; Saber, 7(15), 41-65.</p>
+            </div>
+            <div>
+              <p class="article-meta-field"><strong>Técnica/Instrumento:</strong> Observación participante virtual inmersiva en plataformas digitales de aprendizaje, foros asincrónicos, entrevistas en profundidad y análisis hermenéutico.</p>
+              <div class="article-justification">
+                <strong>¿Por qué ilustra este diseño?:</strong>
+                Aplica la tradición etnográfica al ciberespacio, interpretando las pautas de interacción, significados y cultura digital que construyen los participantes al interactuar a través de software y aulas virtuales.
+              </div>
+            </div>
+            <div class="article-footer">
+              <a href="https://doi.org/10.19053/22160159.v7.n15.2016.5722" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
+                Leer Artículo en Redalyc
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- CUALITATIVO 3: Investigación-Acción (Boletín Redipe / Dialnet) -->
+          <article class="card article-card qual-border" data-category="cualitativo">
+            <div class="article-header">
+              <div class="article-badges-row">
+                <span class="badge badge-qual">Cualitativo</span>
+                <span class="badge">Investigación-Acción (IA)</span>
+                <span class="badge">Dialnet</span>
+              </div>
+              <h3 class="article-title">Diseño de algoritmos con Scratch para el desarrollo del Pensamiento Computacional</h3>
+              <p class="article-authors"><strong>Autores:</strong> Hernández Suárez, C. A., Gamboa Suárez, A. A., &amp; Avendaño Castro, W. R. (2022)</p>
+              <p class="article-journal">Revista Boletín Redipe, 11(2), 461-476.</p>
+            </div>
+            <div>
+              <p class="article-meta-field"><strong>Técnica/Instrumento:</strong> Diarios de campo del docente, guías de observación participativa durante talleres de programación por bloques y reflexiones colectivas de los estudiantes.</p>
+              <div class="article-justification">
+                <strong>¿Por qué ilustra este diseño?:</strong>
+                Los investigadores intervienen directamente en su propio entorno educativo, aplicando ciclos iterativos (diagnóstico, talleres con el software Scratch, observación en aula y reajuste) para transformar las habilidades lógicas de los alumnos.
+              </div>
+            </div>
+            <div class="article-footer">
+              <a href="https://doi.org/10.36260/rbr.v11i2.1696" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
+                Leer Artículo en Dialnet
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================
+         8. RECURSOS AUDIOVISUALES
+         ======================================================== -->
+    <section id="recursos" class="section section-alt">
+      <div class="container">
+        <div class="section-header">
+          <span class="badge">Formación Multimedia</span>
+          <h2>Recursos Audiovisuales Explicativos</h2>
+          <p>
+            Videos formativos universitarios seleccionados para profundizar en los detalles operativos de los diseños de investigación cuantitativos y cualitativos.
+          </p>
+        </div>
+
+        <div class="video-grid">
+          <!-- Video Cuantitativo -->
+          <article class="video-card">
+            <div class="video-container">
+              <iframe 
+                src="https://www.youtube-nocookie.com/embed/Xq4yN84uE7o" 
+                title="Diseños de Investigación Cuantitativos: Experimentales y No Experimentales" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen 
+                loading="lazy">
+              </iframe>
+            </div>
+            <div class="video-body">
+              <div>
+                <span class="badge badge-quant">Ruta Cuantitativa</span>
+                <h3 class="video-title">Diseños de Investigación Cuantitativos</h3>
+                <p class="video-author">Canal: Metodología de la Investigación Académica</p>
+                <p>
+                  Explicación detallada de las tipologías experimentales (preexperimentos, cuasiexperimentos y experimentos puros) y las variantes no experimentales (transeccionales y longitudinales) basadas en la obra del Dr. Roberto Hernández-Sampieri.
+                </p>
+              </div>
+              <div style="margin-top: 1rem;">
+                <a href="https://www.youtube.com/watch?v=Xq4yN84uE7o" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
+                  Ver directo en YouTube
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Video Cualitativo -->
+          <article class="video-card">
+            <div class="video-container">
+              <iframe 
+                src="https://www.youtube-nocookie.com/embed/5-b8nS0L_d4" 
+                title="Diseños de Investigación Cualitativos: Teoría Fundamentada, Etnografía y Fenomenología" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen 
+                loading="lazy">
+              </iframe>
+            </div>
+            <div class="video-body">
+              <div>
+                <span class="badge badge-qual">Ruta Cualitativa</span>
+                <h3 class="video-title">Diseños del Proceso Cualitativo</h3>
+                <p class="video-author">Canal: Cátedra de Epistemología y Metodología</p>
+                <p>
+                  Recorrido estructurado por los diseños emergentes cualitativos: teoría fundamentada sistemática, abordajes etnográficos en comunidades reales y virtuales, fenomenología de vivencias e investigación-acción transformadora.
+                </p>
+              </div>
+              <div style="margin-top: 1rem;">
+                <a href="https://www.youtube.com/watch?v=5-b8nS0L_d4" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
+                  Ver directo en YouTube
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================
+         9. PARA PROFUNDIZAR (RECURSOS CONFIABLES)
+         ======================================================== -->
+    <section id="profundizar" class="section">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="badge">Repositorios Académicos</span>
+          <h2>Portales para Profundizar en Metodología Científica</h2>
+          <p>Bases de datos indexadas y bibliotecas abiertas para consultar literatura empírica de calidad.</p>
+        </div>
+
+        <div class="card-grid">
+          <div class="card">
+            <h4>SciELO (Scientific Electronic Library Online)</h4>
+            <p>Red de revistas científicas de acceso abierto en Iberoamérica con rigurosa indexación por pares ciegos.</p>
+            <a href="https://scielo.org/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm" style="margin-top: 0.5rem;">
+              Visitar SciELO
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+            </a>
+          </div>
+
+          <div class="card">
+            <h4>Redalyc (Red de Revistas Científicas)</h4>
+            <p>Plataforma impulsada por la UAEM con miles de artículos a texto completo sin cargos por publicación (Diamond Open Access).</p>
+            <a href="https://www.redalyc.org/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm" style="margin-top: 0.5rem;">
+              Visitar Redalyc
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+            </a>
+          </div>
+
+          <div class="card">
+            <h4>Dialnet (Universidad de La Rioja)</h4>
+            <p>Uno de los mayores portales bibliográficos en lengua hispana, esencial para tesis doctorales y actas de congresos en ingeniería y educación.</p>
+            <a href="https://dialnet.unirioja.es/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm" style="margin-top: 0.5rem;">
+              Visitar Dialnet
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================
+         10. MINI QUIZ DE AUTOEVALUACIÓN INTERACTIVO
+         ======================================================== -->
+    <section id="quiz" class="section section-alt">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="badge">Comprueba lo Aprendido</span>
+          <h2>Quiz de Autoevaluación Metodológica</h2>
+          <p>Pon a prueba tus conocimientos con estas 5 preguntas prácticas y recibe retroalimentación explicativa inmediata.</p>
+        </div>
+
+        <div class="quiz-wrapper" role="region" aria-label="Cuestionario de autoevaluación">
+          <div class="quiz-header">
+            <span id="quiz-progress" class="quiz-progress-text">Pregunta 1 de 5</span>
+            <span id="quiz-score" class="quiz-score-pill">Aciertos: 0 / 5</span>
+          </div>
+
+          <div class="quiz-question-box">
+            <h3 id="quiz-question-title" class="quiz-question-title">Cargando pregunta...</h3>
+            <ul id="quiz-options-container" class="quiz-options">
+              <!-- Las opciones se generan dinámicamente en main.js -->
+            </ul>
+          </div>
+
+          <!-- Caja de retroalimentación inmediata -->
+          <div id="quiz-feedback-box" class="quiz-feedback-box" role="alert" aria-live="assertive"></div>
+
+          <div class="quiz-nav-actions">
+            <button id="quiz-next-btn" class="btn btn-primary btn-sm" style="display: none;">
+              <span>Siguiente Pregunta</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </button>
+            <button id="quiz-restart-btn" class="btn btn-secondary btn-sm" style="display: none;">Reiniciar Cuestionario</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================
+         11. BIBLIOGRAFÍA EN FORMATO APA 7
+         ======================================================== -->
+    <section id="bibliografia" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="badge">Rigor Académico</span>
+          <h2>Referencias Bibliográficas (Normas APA 7.ª Edición)</h2>
+          <p>Textos base del módulo de Metodología de la Investigación y fuentes primarias citadas a lo largo de este blog.</p>
+        </div>
+
+        <ul class="references-list">
+          <!-- Textos Base Obligatorios -->
+          <li class="apa-reference">
+            Hernández-Sampieri, R., &amp; Mendoza Torres, C. P. (2018). <em>Capítulo 7. Concepción o elección del diseño de investigación en la ruta cuantitativa: El mapa específico</em>. En R. Hernández-Sampieri &amp; C. P. Mendoza Torres, <em>Metodología de la investigación. Las rutas cuantitativa, cualitativa y mixta</em> (pp. 148-193). McGraw-Hill Interamericana Editores.
+          </li>
+          <li class="apa-reference">
+            Hernández-Sampieri, R., &amp; Mendoza Torres, C. P. (2018). <em>Capítulo 14. Elección del diseño o abordaje de investigación en la ruta cualitativa</em>. En R. Hernández-Sampieri &amp; C. P. Mendoza Torres, <em>Metodología de la investigación. Las rutas cuantitativa, cualitativa y mixta</em> (pp. 522-568). McGraw-Hill Interamericana Editores.
+          </li>
+          <li class="apa-reference">
+            Ñaupas Paitán, H., Valdivia Dueñas, M. R., Palacios Vilela, J. J., &amp; Romero Delgado, H. E. (2018). <em>Capítulo IX. El diseño de investigación</em>. En <em>Metodología de la investigación cuantitativa-cualitativa y redacción de tesis</em> (5.ª ed., pp. 347-372). Ediciones de la U.
+          </li>
+
+          <!-- Artículos de Investigaciones Reales Citados -->
+          <li class="apa-reference">
+            Guerrero Posadas, M., &amp; García Orozco, J. (2016). Desarrollo del pensamiento algorítmico con el apoyo de objetos de aprendizaje generativos. <em>Píxel-Bit. Revista de Medios y Educación</em>, (49), 163-175. <a href="https://doi.org/10.12795/pixelbit.2016.i49.11" target="_blank" rel="noopener noreferrer">https://doi.org/10.12795/pixelbit.2016.i49.11</a>
+          </li>
+          <li class="apa-reference">
+            Gutiérrez Giraldo, M. C., Agudelo Cely, N., &amp; Caro, E. O. (2016). La etnografía educativa virtual y la formación de docentes. <em>Praxis &amp; Saber</em>, 7(15), 41-65. <a href="https://doi.org/10.19053/22160159.v7.n15.2016.5722" target="_blank" rel="noopener noreferrer">https://doi.org/10.19053/22160159.v7.n15.2016.5722</a>
+          </li>
+          <li class="apa-reference">
+            Hernández Suárez, C. A., Gamboa Suárez, A. A., &amp; Avendaño Castro, W. R. (2022). Diseño de algoritmos en tecnología con Scratch para el desarrollo del Pensamiento Computacional. <em>Revista Boletín Redipe</em>, 11(2), 461-476. <a href="https://doi.org/10.36260/rbr.v11i2.1696" target="_blank" rel="noopener noreferrer">https://doi.org/10.36260/rbr.v11i2.1696</a>
+          </li>
+          <li class="apa-reference">
+            Muñoz, I. C., Collazos, C. A., &amp; Hurtado, J. A. (2024). Desafíos de colaboración en la adopción de Scrum: un estudio en equipos de desarrollo de software del departamento del Cauca, Colombia. <em>TecnoLógicas</em>, 27(59), e2749. <a href="https://doi.org/10.22430/22565337.2749" target="_blank" rel="noopener noreferrer">https://doi.org/10.22430/22565337.2749</a>
+          </li>
+          <li class="apa-reference">
+            Riquelme-Plaza, I., Cabero-Almenara, J., &amp; Marín-Díaz, V. (2022). Validación del cuestionario de competencia digital docente en profesorado universitario chileno. <em>Revista Electrónica Educare</em>, 26(1), 222-240. <a href="https://doi.org/10.15359/ree.26-1.12" target="_blank" rel="noopener noreferrer">https://doi.org/10.15359/ree.26-1.12</a>
+          </li>
+          <li class="apa-reference">
+            Sánchez Sánchez, M. I., Meraz Ruiz, L., &amp; Martínez Rodríguez, R. A. (2021). Factores que influyen en la adopción de sistemas de información en las micro, pequeñas y medianas empresas del vino del Valle de Guadalupe. <em>CIENCIA ergo-sum</em>, 28(4), 1-14. <a href="https://doi.org/10.30878/ces.v28n4a7" target="_blank" rel="noopener noreferrer">https://doi.org/10.30878/ces.v28n4a7</a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ========================================================
+         12. SECCIÓN DE COMENTARIOS (DISQUS UNIVERSAL CODE)
+         Shortname oficial registrado: investigacioncua
+         ======================================================== -->
+    <section id="comentarios" class="section comments-section">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="badge">Debate e Interacción</span>
+          <h2>Espacio de Comentarios y Discusión</h2>
+          <p>
+            Invitamos a nuestro docente y compañeros de curso a compartir sus opiniones, observaciones críticas o preguntas sobre los diseños cuantitativos y cualitativos. ¿Has aplicado alguno en tus proyectos de software?
+          </p>
+          <!-- Contador discreto de comentarios -->
+          <div class="disqus-count-badge">
+            <a href="#disqus_thread" data-disqus-identifier="blog-disenos-investigacion" class="comments-link">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM6 9h12v2H6V9zm8 5H6v-2h8v2zm4-6H6V6h12v2z"/></svg>
+              <span class="disqus-comment-count" data-disqus-identifier="blog-disenos-investigacion">Cargando comentarios...</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Contenedor donde Disqus renderiza el hilo de conversación -->
+        <div class="disqus-container">
+          <div id="disqus_thread"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========================================================
+       13. PIE DE PÁGINA (FOOTER)
+       ======================================================== -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4>Metodología de la Investigación</h4>
+          <p>
+            Blog académico digital elaborado para la actividad individual sobre diseños cuantitativos y cualitativos de investigación científica y su aplicación en la industria del software.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Navegación Rápida</h4>
+          <ul class="footer-links">
+            <li><a href="#inicio">Inicio / Portada</a></li>
+            <li><a href="#cuantitativo">Ruta Cuantitativa</a></li>
+            <li><a href="#cualitativo">Ruta Cualitativa</a></li>
+            <li><a href="#comparacion">Tabla Comparativa</a></li>
+            <li><a href="#tecnicas">Técnicas de Recolección</a></li>
+            <li><a href="#articulos">Artículos Científicos</a></li>
+            <li><a href="#quiz">Quiz de Autoevaluación</a></li>
+            <li><a href="#bibliografia">Referencias APA 7</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Ficha Académica</h4>
+          <ul class="footer-links" style="color: #cbd5e1;">
+            <li><strong>Autor:</strong> [Nombre del Estudiante - Placeholder editable]</li>
+            <li><strong>Programa:</strong> Tecnología en Análisis y Desarrollo de Software (ADSO)</li>
+            <li><strong>Módulo:</strong> Metodología de la Investigación</li>
+            <li><strong>Año Académico:</strong> 2026</li>
+            <li><strong>Plataforma Disqus:</strong> investigacioncua</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          &copy; 2026 Blog Académico de Metodología de la Investigación. Desarrollado con HTML5, CSS3 y JavaScript estático puro.
+        </div>
+        <div>
+          Desplegable sin compilación en Netlify
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Botón flotante para volver arriba -->
+  <button id="back-to-top-btn" class="back-to-top-btn" type="button" aria-label="Volver arriba de la página" title="Volver arriba">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="19" x2="12" y2="5"></line><polyline points="5 12 12 5 19 12"></polyline></svg>
+  </button>
+
+  <!-- Script principal del blog -->
+  <script src="js/main.js"></script>
+
+  <!-- ========================================================
+       INTEGRACIÓN OFICIAL DE DISQUS (UNIVERSAL CODE)
+       Shortname: investigacioncua
+       ======================================================== -->
+  <script>
+    /**
+     * URL OFICIAL DEL BLOG EN NETLIFY
+     * -------------------------------------------------------------
+     * INSTRUCCIÓN IMPORTANTE:
+     * Cuando despliegues este sitio en Netlify y tengas tu dominio público definitivo
+     * (por ejemplo: "https://mi-blog-investigacion.netlify.app/"),
+     * escribe esa URL entre las comillas simples de la variable BLOG_URL_OFICIAL.
+     * 
+     * Mientras esté vacía (''), el script usará automáticamente:
+     * window.location.origin + window.location.pathname
+     * para que funcione tanto en desarrollo local como en producción de inmediato.
+     */
+    const BLOG_URL_OFICIAL = ''; // <-- REEMPLAZAR por la URL final de Netlify cuando la tenga
+
+    var disqus_config = function () {
+        // Asignación de la URL de la página para Disqus
+        this.page.url = BLOG_URL_OFICIAL.trim() !== '' 
+            ? BLOG_URL_OFICIAL 
+            : (window.location.origin + window.location.pathname);
+            
+        // Identificador único y fijo para este post del blog
+        this.page.identifier = 'blog-disenos-investigacion';
+    };
+
+    (function() { // NO EDITAR DESDE AQUÍ
+        var d = document, s = d.createElement('script');
+        s.src = 'https://investigacioncua.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" target="_blank" rel="noopener noreferrer">comments powered by Disqus.</a></noscript>
+
+  <!-- Script oficial contador de comentarios de Disqus -->
+  <script id="dsq-count-scr" src="//investigacioncua.disqus.com/count.js" async></script>
+</body>
+</html>
