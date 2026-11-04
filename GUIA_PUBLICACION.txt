@@ -2,7 +2,7 @@
 GUÍA MAESTRA DE PUBLICACIÓN Y CONFIGURACIÓN DEL BLOG ACADÉMICO
 Tema: Los Diseños de Investigación Cuantitativos y Cualitativos
 Módulo: Metodología de la Investigación
-Programa: Tecnología en Análisis y Desarrollo de Software (ADSO)
+Programa: Licenciatura en Inglés
 ================================================================================
 
 ¡Felicidades! Tu blog académico está 100% construido con HTML5, CSS3 y JavaScript
@@ -56,7 +56,7 @@ docente y compañeros:
    "Site settings").
 2. En la sección "General"  -->  "Site details", busca la opción "Change site name".
 3. Escribe un nombre descriptivo y académico en minúsculas y guiones, por ejemplo:
-   - blog-investigacion-adso
+   - blog-investigacion-ingles
    - blog-metodologia-juliana
    - investigacion-cuantitativa-cualitativa
 4. Haz clic en "Save".
@@ -157,10 +157,8 @@ el debate académico!
 ================================================================================
 7. CHECKLIST DE ELEMENTOS QUE DEBES PERSONALIZAR TÚ
 ================================================================================
-[ ] Reemplazar el nombre del estudiante:
-    - En `index.html` busca: "[Nombre del Autor - Estudiante ADSO]" en el Hero
-      (línea ~95) y en el Footer (línea ~650).
-    - En `README.md` busca: "[Nombre del Autor - Estudiante de ADSO]".
+[X] Autores configurados:
+    - Lizeth Dejoy, Kamila Mogollón, Juan Rodriguez (Licenciatura en Inglés).
 [ ] Configurar la URL de Netlify:
     - En `index.html` colocar la URL en `const BLOG_URL_OFICIAL = '...';`.
 [ ] Autorizar el dominio en Disqus:

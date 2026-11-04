@@ -2,8 +2,8 @@
 
 Sitio web estático interactivo desarrollado para la actividad académica individual del módulo de **Metodología de la Investigación**.
 
-- **Autor:** Juliana
-- **Programa de Formación:** Tecnología en Análisis y Desarrollo de Software (ADSO)
+- **Autores:** Lizeth Dejoy, Kamila Mogollón, Juan Rodriguez
+- **Programa de Formación:** Licenciatura en Inglés
 - **Módulo Académico:** Metodología de la Investigación
 - **Año:** 2026
 - **Sitio Web en Vivo (Netlify):** https://metodologia-investigacion-cua.netlify.app/
