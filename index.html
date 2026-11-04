@@ -38,15 +38,15 @@
 
       <!-- Menú de navegación principal -->
       <nav id="navbar-menu" class="navbar-menu" role="navigation" aria-label="Navegación principal">
-        <a href="#inicio" class="nav-link active">Inicio</a>
-        <a href="#introduccion" class="nav-link">Introducción</a>
-        <a href="#cuantitativo" class="nav-link">Ruta Cuantitativa</a>
-        <a href="#cualitativo" class="nav-link">Ruta Cualitativa</a>
-        <a href="#comparacion" class="nav-link">Comparación</a>
-        <a href="#tecnicas" class="nav-link">Técnicas</a>
-        <a href="#articulos" class="nav-link">Artículos</a>
-        <a href="#quiz" class="nav-link">Quiz</a>
-        <a href="#bibliografia" class="nav-link">Bibliografía</a>
+        <a href="#inicio" class="nav-link active" data-i18n="nav_home">Inicio</a>
+        <a href="#introduccion" class="nav-link" data-i18n="nav_intro">Introducción</a>
+        <a href="#cuantitativo" class="nav-link" data-i18n="nav_quant">Ruta Cuantitativa</a>
+        <a href="#cualitativo" class="nav-link" data-i18n="nav_qual">Ruta Cualitativa</a>
+        <a href="#comparacion" class="nav-link" data-i18n="nav_comp">Comparación</a>
+        <a href="#tecnicas" class="nav-link" data-i18n="nav_tech">Técnicas</a>
+        <a href="#articulos" class="nav-link" data-i18n="nav_articles">Artículos</a>
+        <a href="#quiz" class="nav-link" data-i18n="nav_quiz">Quiz</a>
+        <a href="#bibliografia" class="nav-link" data-i18n="nav_refs">Referencias</a>
       </nav>
 
       <!-- Acciones de barra (Contador Disqus y Switch de tema) -->
@@ -56,6 +56,13 @@
           <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM6 9h12v2H6V9zm8 5H6v-2h8v2zm4-6H6V6h12v2z"/></svg>
           <span class="disqus-comment-count" data-disqus-identifier="blog-disenos-investigacion">Comentarios</span>
         </a>
+
+        <!-- Selector de idioma Español / English -->
+        <button id="lang-toggle-btn" class="lang-toggle-btn" type="button" aria-label="Cambiar a inglés / Switch to English" title="Cambiar idioma / Switch language">
+          <span class="lang-opt active" id="lang-opt-es">ES</span>
+          <span class="lang-sep">|</span>
+          <span class="lang-opt" id="lang-opt-en">EN</span>
+        </button>
 
         <!-- Botón para alternar tema claro / oscuro -->
         <button id="theme-toggle-btn" class="theme-toggle-btn" type="button" aria-label="Cambiar a modo oscuro" title="Cambiar tema claro/oscuro">
@@ -93,17 +100,17 @@
       <div class="container hero-grid">
         <div class="hero-content">
           <div class="hero-tagline">
-            <span class="badge badge-quant">Ruta Cuantitativa</span>
-            <span class="badge badge-qual">Ruta Cualitativa</span>
-            <span class="badge badge-mixed">Ruta Mixta</span>
+            <span class="badge badge-quant" data-i18n="hero_badge_quant">Ruta Cuantitativa</span>
+            <span class="badge badge-qual" data-i18n="hero_badge_qual">Ruta Cualitativa</span>
+            <span class="badge badge-mixed" data-i18n="hero_badge_mixed">Ruta Mixta</span>
           </div>
 
-          <h1 class="hero-title">
+          <h1 class="hero-title" data-i18n="hero_title">
             Los Diseños de Investigación <span class="highlight-gradient">Científica</span>
           </h1>
 
-          <p class="hero-subtitle">
-            Comprende los planos estratégicos que guían la generación de conocimiento riguroso: desde experimentos controlados hasta inmersiones etnográficas, ilustrados en contextos de desarrollo de software y tecnología.
+          <p class="hero-subtitle" data-i18n="hero_subtitle">
+            Comprende los planos estratégicos que guían la generación de conocimiento riguroso: desde experimentos controlados hasta inmersiones etnográficas, ilustrados en contextos de educación, lenguas y tecnología.
           </p>
 
           <!-- Perfil académico de los autores -->
@@ -113,16 +120,16 @@
             </div>
             <div class="hero-meta-text">
               <span class="author-title">Lizeth Dejoy • Kamila Mogollón • Juan Rodriguez</span>
-              <span class="author-sub">Licenciatura en Inglés • Módulo de Metodología de la Investigación</span>
+              <span class="author-sub" data-i18n="hero_author_sub">Licenciatura en Inglés • Módulo de Metodología de la Investigación</span>
             </div>
           </div>
 
           <div class="hero-cta-group">
-            <a href="#introduccion" class="btn btn-primary">
+            <a href="#introduccion" class="btn btn-primary" data-i18n="hero_btn_read">
               Comenzar Lectura
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
             </a>
-            <a href="#comparacion" class="btn btn-secondary">
+            <a href="#comparacion" class="btn btn-secondary" data-i18n="hero_btn_comp">
               Ver Tabla Comparativa
             </a>
           </div>
@@ -150,9 +157,9 @@
     <section id="introduccion" class="section section-alt">
       <div class="container">
         <div class="section-header">
-          <span class="badge">Fundamentos Epistemológicos</span>
-          <h2>¿Qué es un diseño de investigación y por qué es indispensable?</h2>
-          <p>La arquitectura previa que determina la validez, solidez y rigor de cualquier hallazgo científico.</p>
+          <span class="badge" data-i18n="intro_badge">Fundamentos Epistemológicos</span>
+          <h2 data-i18n="intro_title">¿Qué es un diseño de investigación y por qué es indispensable?</h2>
+          <p data-i18n="intro_subtitle">La arquitectura previa que determina la validez, solidez y rigor de cualquier hallazgo científico.</p>
         </div>
 
         <div class="card-grid">
@@ -205,9 +212,9 @@
     <section id="cuantitativo" class="section">
       <div class="container">
         <div class="section-header">
-          <span class="badge badge-quant">Ruta Cuantitativa</span>
-          <h2>Medición Numérica, Control y Comprobación de Hipótesis</h2>
-          <p>
+          <span class="badge badge-quant" data-i18n="quant_badge">Ruta Cuantitativa</span>
+          <h2 data-i18n="quant_title">Medición Numérica, Control y Comprobación de Hipótesis</h2>
+          <p data-i18n="quant_subtitle">
             Bajo el paradigma postpositivista, la ruta cuantitativa busca explicar, predecir y controlar fenómenos a través de la recolección estructurada de datos y el análisis estadístico deductivo.
           </p>
         </div>
@@ -230,19 +237,19 @@
             <li>
               <button class="tab-btn active" role="tab" id="tab-btn-exp" aria-selected="true" aria-controls="panel-exp" data-tab="panel-exp">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 2v7.31L4.62 17.5A2 2 0 0 0 6.38 20.5h11.24a2 2 0 0 0 1.76-3L14 9.31V2h-4z"></path><path d="M8.5 2h7"></path><path d="M14 9.3h-4"></path></svg>
-                <span>Diseños Experimentales</span>
+                <span data-i18n="tab_exp">Diseños Experimentales</span>
               </button>
             </li>
             <li>
               <button class="tab-btn" role="tab" id="tab-btn-trans" aria-selected="false" aria-controls="panel-trans" data-tab="panel-trans">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-                <span>No Experimentales: Transeccionales</span>
+                <span data-i18n="tab_trans">No Experimentales: Transeccionales</span>
               </button>
             </li>
             <li>
               <button class="tab-btn" role="tab" id="tab-btn-long" aria-selected="false" aria-controls="panel-long" data-tab="panel-long">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline><polyline points="17 6 23 6 23 12"></polyline></svg>
-                <span>No Experimentales: Longitudinales</span>
+                <span data-i18n="tab_long">No Experimentales: Longitudinales</span>
               </button>
             </li>
           </ul>
@@ -367,9 +374,9 @@
     <section id="cualitativo" class="section section-alt">
       <div class="container">
         <div class="section-header">
-          <span class="badge badge-qual">Ruta Cualitativa</span>
-          <h2>Inmersión Contextual, Inducción y Significado Humano</h2>
-          <p>
+          <span class="badge badge-qual" data-i18n="qual_badge">Ruta Cualitativa</span>
+          <h2 data-i18n="qual_title">Inmersión Contextual, Inducción y Significado Humano</h2>
+          <p data-i18n="qual_subtitle">
             La ruta cualitativa no busca medir numéricamente variables aisladas, sino comprender la complejidad de las vivencias, culturas, prácticas cotidianas y percepciones de los actores en su entorno natural.
           </p>
         </div>
@@ -536,9 +543,9 @@
     <section id="comparacion" class="section">
       <div class="container">
         <div class="section-header text-center">
-          <span class="badge">Matriz Metodológica</span>
-          <h2>Comparación Directa: Cuantitativo vs. Cualitativo</h2>
-          <p>
+          <span class="badge" data-i18n="comp_badge">Matriz Metodológica</span>
+          <h2 data-i18n="comp_title">Comparación Directa: Cuantitativo vs. Cualitativo</h2>
+          <p data-i18n="comp_subtitle">
             Comprender las diferencias epistemológicas y operativas es clave para elegir el diseño adecuado según el problema de estudio.
           </p>
         </div>
@@ -702,9 +709,9 @@
     <section id="tecnicas" class="section section-alt">
       <div class="container">
         <div class="section-header">
-          <span class="badge">Instrumentación Científica</span>
-          <h2>Técnicas e Instrumentos de Recolección de Datos</h2>
-          <p>
+          <span class="badge" data-i18n="tech_badge">Instrumentación Científica</span>
+          <h2 data-i18n="tech_title">Técnicas e Instrumentos de Recolección de Datos</h2>
+          <p data-i18n="tech_subtitle">
             Las herramientas operativas que permiten capturar la evidencia empírica. Cada técnica responde a un propósito específico y tiene fortalezas y restricciones metodológicas.
           </p>
         </div>
@@ -826,18 +833,18 @@
     <section id="articulos" class="section">
       <div class="container">
         <div class="section-header text-center">
-          <span class="badge">Evidencia Científica Real</span>
-          <h2>Artículos de Investigación Publicados (2016 - 2026)</h2>
-          <p>
-            Investigaciones verificadas en bases de datos académicas (SciELO, Redalyc, Dialnet) orientadas a tecnología, software y educación que ilustran cada diseño.
+          <span class="badge" data-i18n="art_badge">Evidencia Científica Real</span>
+          <h2 data-i18n="art_title">Artículos de Investigación Publicados (2016 - 2026)</h2>
+          <p data-i18n="art_subtitle">
+            Investigaciones verificadas en bases de datos académicas (SciELO, Redalyc, Dialnet) orientadas a tecnología, educación y software que ilustran cada diseño.
           </p>
         </div>
 
         <!-- Botones de filtro de artículos -->
         <div class="articles-filter-nav">
-          <button class="btn btn-secondary btn-sm filter-btn active" data-filter="all">Todos los Artículos (6)</button>
-          <button class="btn btn-secondary btn-sm filter-btn" data-filter="cuantitativo">Diseños Cuantitativos (3)</button>
-          <button class="btn btn-secondary btn-sm filter-btn" data-filter="cualitativo">Diseños Cualitativos (3)</button>
+          <button class="btn btn-secondary btn-sm filter-btn active" data-filter="all" data-i18n="art_btn_all">Todos los Artículos (6)</button>
+          <button class="btn btn-secondary btn-sm filter-btn" data-filter="cuantitativo" data-i18n="art_btn_quant">Diseños Cuantitativos (3)</button>
+          <button class="btn btn-secondary btn-sm filter-btn" data-filter="cualitativo" data-i18n="art_btn_qual">Diseños Cualitativos (3)</button>
         </div>
 
         <div class="card-grid">
@@ -1012,9 +1019,9 @@
     <section id="recursos" class="section section-alt">
       <div class="container">
         <div class="section-header">
-          <span class="badge">Formación Multimedia</span>
-          <h2>Recursos Audiovisuales Explicativos</h2>
-          <p>
+          <span class="badge" data-i18n="vid_badge">Formación Multimedia</span>
+          <h2 data-i18n="vid_title">Recursos Audiovisuales Explicativos</h2>
+          <p data-i18n="vid_subtitle">
             Videos formativos universitarios seleccionados para profundizar en los detalles operativos de los diseños de investigación cuantitativos y cualitativos.
           </p>
         </div>
@@ -1087,9 +1094,9 @@
     <section id="profundizar" class="section">
       <div class="container">
         <div class="section-header text-center">
-          <span class="badge">Repositorios Académicos</span>
-          <h2>Portales para Profundizar en Metodología Científica</h2>
-          <p>Bases de datos indexadas y bibliotecas abiertas para consultar literatura empírica de calidad.</p>
+          <span class="badge" data-i18n="prof_badge">Repositorios Académicos</span>
+          <h2 data-i18n="prof_title">Portales para Profundizar en Metodología Científica</h2>
+          <p data-i18n="prof_subtitle">Bases de datos indexadas y bibliotecas abiertas para consultar literatura empírica de calidad.</p>
         </div>
 
         <div class="card-grid">
@@ -1129,9 +1136,9 @@
     <section id="quiz" class="section section-alt">
       <div class="container">
         <div class="section-header text-center">
-          <span class="badge">Comprueba lo Aprendido</span>
-          <h2>Quiz de Autoevaluación Metodológica</h2>
-          <p>Pon a prueba tus conocimientos con estas 5 preguntas prácticas y recibe retroalimentación explicativa inmediata.</p>
+          <span class="badge" data-i18n="quiz_badge">Comprueba lo Aprendido</span>
+          <h2 data-i18n="quiz_title">Quiz de Autoevaluación Metodológica</h2>
+          <p data-i18n="quiz_subtitle">Pon a prueba tus conocimientos con estas 5 preguntas prácticas y recibe retroalimentación explicativa inmediata.</p>
         </div>
 
         <div class="quiz-wrapper" role="region" aria-label="Cuestionario de autoevaluación">
@@ -1162,48 +1169,172 @@
     </section>
 
     <!-- ========================================================
-         11. BIBLIOGRAFÍA EN FORMATO APA 7
+         11. REFERENCIAS BIBLIOGRÁFICAS
          ======================================================== -->
     <section id="bibliografia" class="section">
       <div class="container">
         <div class="section-header">
-          <span class="badge">Rigor Académico</span>
-          <h2>Referencias Bibliográficas (Normas APA 7.ª Edición)</h2>
-          <p>Textos base del módulo de Metodología de la Investigación y fuentes primarias citadas a lo largo de este blog.</p>
+          <span class="badge" data-i18n="refs_badge">Rigor Académico</span>
+          <h2 data-i18n="refs_title">Referencias Bibliográficas</h2>
+          <p data-i18n="refs_subtitle">Fuentes fundamentales de la asignatura y literatura científica citada a lo largo de este blog.</p>
         </div>
 
-        <ul class="references-list">
-          <!-- Textos Base Obligatorios -->
-          <li class="apa-reference">
-            Hernández-Sampieri, R., &amp; Mendoza Torres, C. P. (2018). <em>Capítulo 7. Concepción o elección del diseño de investigación en la ruta cuantitativa: El mapa específico</em>. En R. Hernández-Sampieri &amp; C. P. Mendoza Torres, <em>Metodología de la investigación. Las rutas cuantitativa, cualitativa y mixta</em> (pp. 148-193). McGraw-Hill Interamericana Editores.
-          </li>
-          <li class="apa-reference">
-            Hernández-Sampieri, R., &amp; Mendoza Torres, C. P. (2018). <em>Capítulo 14. Elección del diseño o abordaje de investigación en la ruta cualitativa</em>. En R. Hernández-Sampieri &amp; C. P. Mendoza Torres, <em>Metodología de la investigación. Las rutas cuantitativa, cualitativa y mixta</em> (pp. 522-568). McGraw-Hill Interamericana Editores.
-          </li>
-          <li class="apa-reference">
-            Ñaupas Paitán, H., Valdivia Dueñas, M. R., Palacios Vilela, J. J., &amp; Romero Delgado, H. E. (2018). <em>Capítulo IX. El diseño de investigación</em>. En <em>Metodología de la investigación cuantitativa-cualitativa y redacción de tesis</em> (5.ª ed., pp. 347-372). Ediciones de la U.
-          </li>
+        <div class="references-grid">
+          <!-- Referencia 1: Sampieri Cuantitativo -->
+          <article class="ref-card ref-book">
+            <div class="ref-card-header">
+              <span class="ref-badge ref-badge-book">Libro Base • Ruta Cuantitativa</span>
+              <svg class="ref-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+            </div>
+            <div class="ref-card-content">
+              <strong>Hernández-Sampieri, R., &amp; Mendoza Torres, C. P. (2018).</strong>
+              <p style="margin-top:0.4rem;"><em>Capítulo 7. Concepción o elección del diseño de investigación en la ruta cuantitativa: El mapa específico</em>. En <em>Metodología de la investigación. Las rutas cuantitativa, cualitativa y mixta</em> (pp. 148-193). McGraw-Hill Interamericana Editores.</p>
+            </div>
+            <div class="ref-card-footer">
+              <span style="font-size: 0.82rem; color: var(--text-subtle);">Fuente Metodológica Fundamental</span>
+            </div>
+          </article>
 
-          <!-- Artículos de Investigaciones Reales Citados -->
-          <li class="apa-reference">
-            Guerrero Posadas, M., &amp; García Orozco, J. (2016). Desarrollo del pensamiento algorítmico con el apoyo de objetos de aprendizaje generativos. <em>Píxel-Bit. Revista de Medios y Educación</em>, (49), 163-175. <a href="https://doi.org/10.12795/pixelbit.2016.i49.11" target="_blank" rel="noopener noreferrer">https://doi.org/10.12795/pixelbit.2016.i49.11</a>
-          </li>
-          <li class="apa-reference">
-            Gutiérrez Giraldo, M. C., Agudelo Cely, N., &amp; Caro, E. O. (2016). La etnografía educativa virtual y la formación de docentes. <em>Praxis &amp; Saber</em>, 7(15), 41-65. <a href="https://doi.org/10.19053/22160159.v7.n15.2016.5722" target="_blank" rel="noopener noreferrer">https://doi.org/10.19053/22160159.v7.n15.2016.5722</a>
-          </li>
-          <li class="apa-reference">
-            Hernández Suárez, C. A., Gamboa Suárez, A. A., &amp; Avendaño Castro, W. R. (2022). Diseño de algoritmos en tecnología con Scratch para el desarrollo del Pensamiento Computacional. <em>Revista Boletín Redipe</em>, 11(2), 461-476. <a href="https://doi.org/10.36260/rbr.v11i2.1696" target="_blank" rel="noopener noreferrer">https://doi.org/10.36260/rbr.v11i2.1696</a>
-          </li>
-          <li class="apa-reference">
-            Muñoz, I. C., Collazos, C. A., &amp; Hurtado, J. A. (2024). Desafíos de colaboración en la adopción de Scrum: un estudio en equipos de desarrollo de software del departamento del Cauca, Colombia. <em>TecnoLógicas</em>, 27(59), e2749. <a href="https://doi.org/10.22430/22565337.2749" target="_blank" rel="noopener noreferrer">https://doi.org/10.22430/22565337.2749</a>
-          </li>
-          <li class="apa-reference">
-            Riquelme-Plaza, I., Cabero-Almenara, J., &amp; Marín-Díaz, V. (2022). Validación del cuestionario de competencia digital docente en profesorado universitario chileno. <em>Revista Electrónica Educare</em>, 26(1), 222-240. <a href="https://doi.org/10.15359/ree.26-1.12" target="_blank" rel="noopener noreferrer">https://doi.org/10.15359/ree.26-1.12</a>
-          </li>
-          <li class="apa-reference">
-            Sánchez Sánchez, M. I., Meraz Ruiz, L., &amp; Martínez Rodríguez, R. A. (2021). Factores que influyen en la adopción de sistemas de información en las micro, pequeñas y medianas empresas del vino del Valle de Guadalupe. <em>CIENCIA ergo-sum</em>, 28(4), 1-14. <a href="https://doi.org/10.30878/ces.v28n4a7" target="_blank" rel="noopener noreferrer">https://doi.org/10.30878/ces.v28n4a7</a>
-          </li>
-        </ul>
+          <!-- Referencia 2: Sampieri Cualitativo -->
+          <article class="ref-card ref-qual">
+            <div class="ref-card-header">
+              <span class="ref-badge ref-badge-qual">Libro Base • Ruta Cualitativa</span>
+              <svg class="ref-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+            </div>
+            <div class="ref-card-content">
+              <strong>Hernández-Sampieri, R., &amp; Mendoza Torres, C. P. (2018).</strong>
+              <p style="margin-top:0.4rem;"><em>Capítulo 14. Elección del diseño o abordaje de investigación en la ruta cualitativa</em>. En <em>Metodología de la investigación. Las rutas cuantitativa, cualitativa y mixta</em> (pp. 522-568). McGraw-Hill Interamericana Editores.</p>
+            </div>
+            <div class="ref-card-footer">
+              <span style="font-size: 0.82rem; color: var(--text-subtle);">Fuente Metodológica Fundamental</span>
+            </div>
+          </article>
+
+          <!-- Referencia 3: Naupas Paitan -->
+          <article class="ref-card ref-book">
+            <div class="ref-card-header">
+              <span class="ref-badge ref-badge-book">Libro Base • Metodología de Tesis</span>
+              <svg class="ref-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+            </div>
+            <div class="ref-card-content">
+              <strong>Ñaupas Paitán, H., Valdivia Dueñas, M. R., Palacios Vilela, J. J., &amp; Romero Delgado, H. E. (2018).</strong>
+              <p style="margin-top:0.4rem;"><em>Capítulo IX. El diseño de investigación</em>. En <em>Metodología de la investigación cuantitativa-cualitativa y redacción de tesis</em> (5.ª ed., pp. 347-372). Ediciones de la U.</p>
+            </div>
+            <div class="ref-card-footer">
+              <span style="font-size: 0.82rem; color: var(--text-subtle);">Fuente Metodológica Fundamental</span>
+            </div>
+          </article>
+
+          <!-- Referencia 4: Guerrero & Garcia -->
+          <article class="ref-card ref-quant">
+            <div class="ref-card-header">
+              <span class="ref-badge ref-badge-quant">Artículo • Redalyc / Dialnet</span>
+              <svg class="ref-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+            </div>
+            <div class="ref-card-content">
+              <strong>Guerrero Posadas, M., &amp; García Orozco, J. (2016).</strong>
+              <p style="margin-top:0.4rem;">Desarrollo del pensamiento algorítmico con el apoyo de objetos de aprendizaje generativos. <em>Píxel-Bit. Revista de Medios y Educación</em>, (49), 163-175.</p>
+            </div>
+            <div class="ref-card-footer">
+              <a href="https://doi.org/10.12795/pixelbit.2016.i49.11" target="_blank" rel="noopener noreferrer" class="ref-action-link">
+                <span>Acceder al documento (DOI)</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Referencia 5: Gutierrez et al -->
+          <article class="ref-card ref-qual">
+            <div class="ref-card-header">
+              <span class="ref-badge ref-badge-qual">Artículo • Praxis &amp; Saber (SciELO)</span>
+              <svg class="ref-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+            </div>
+            <div class="ref-card-content">
+              <strong>Gutiérrez Giraldo, M. C., Agudelo Cely, N., &amp; Caro, E. O. (2016).</strong>
+              <p style="margin-top:0.4rem;">La etnografía educativa virtual y la formación de docentes. <em>Praxis &amp; Saber</em>, 7(15), 41-65.</p>
+            </div>
+            <div class="ref-card-footer">
+              <a href="https://doi.org/10.19053/22160159.v7.n15.2016.5722" target="_blank" rel="noopener noreferrer" class="ref-action-link">
+                <span>Acceder al documento (DOI)</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Referencia 6: Hernandez Suarez et al -->
+          <article class="ref-card ref-qual">
+            <div class="ref-card-header">
+              <span class="ref-badge ref-badge-qual">Artículo • Boletín Redipe (Dialnet)</span>
+              <svg class="ref-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+            </div>
+            <div class="ref-card-content">
+              <strong>Hernández Suárez, C. A., Gamboa Suárez, A. A., &amp; Avendaño Castro, W. R. (2022).</strong>
+              <p style="margin-top:0.4rem;">Diseño de algoritmos en tecnología con Scratch para el desarrollo del Pensamiento Computacional. <em>Revista Boletín Redipe</em>, 11(2), 461-476.</p>
+            </div>
+            <div class="ref-card-footer">
+              <a href="https://doi.org/10.36260/rbr.v11i2.1696" target="_blank" rel="noopener noreferrer" class="ref-action-link">
+                <span>Acceder al documento (DOI)</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Referencia 7: Munoz et al -->
+          <article class="ref-card ref-qual">
+            <div class="ref-card-header">
+              <span class="ref-badge ref-badge-qual">Artículo • TecnoLógicas (SciELO)</span>
+              <svg class="ref-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+            </div>
+            <div class="ref-card-content">
+              <strong>Muñoz, I. C., Collazos, C. A., &amp; Hurtado, J. A. (2024).</strong>
+              <p style="margin-top:0.4rem;">Desafíos de colaboración en la adopción de Scrum: un estudio en equipos de desarrollo de software del departamento del Cauca, Colombia. <em>TecnoLógicas</em>, 27(59), e2749.</p>
+            </div>
+            <div class="ref-card-footer">
+              <a href="https://doi.org/10.22430/22565337.2749" target="_blank" rel="noopener noreferrer" class="ref-action-link">
+                <span>Acceder al documento (DOI)</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Referencia 8: Riquelme-Plaza et al -->
+          <article class="ref-card ref-quant">
+            <div class="ref-card-header">
+              <span class="ref-badge ref-badge-quant">Artículo • Educare (SciELO)</span>
+              <svg class="ref-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+            </div>
+            <div class="ref-card-content">
+              <strong>Riquelme-Plaza, I., Cabero-Almenara, J., &amp; Marín-Díaz, V. (2022).</strong>
+              <p style="margin-top:0.4rem;">Validación del cuestionario de competencia digital docente en profesorado universitario chileno. <em>Revista Electrónica Educare</em>, 26(1), 222-240.</p>
+            </div>
+            <div class="ref-card-footer">
+              <a href="https://doi.org/10.15359/ree.26-1.12" target="_blank" rel="noopener noreferrer" class="ref-action-link">
+                <span>Acceder al documento (DOI)</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Referencia 9: Sanchez et al -->
+          <article class="ref-card ref-quant">
+            <div class="ref-card-header">
+              <span class="ref-badge ref-badge-quant">Artículo • CIENCIA ergo-sum (Redalyc)</span>
+              <svg class="ref-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+            </div>
+            <div class="ref-card-content">
+              <strong>Sánchez Sánchez, M. I., Meraz Ruiz, L., &amp; Martínez Rodríguez, R. A. (2021).</strong>
+              <p style="margin-top:0.4rem;">Factores que influyen en la adopción de sistemas de información en las micro, pequeñas y medianas empresas del vino del Valle de Guadalupe. <em>CIENCIA ergo-sum</em>, 28(4), 1-14.</p>
+            </div>
+            <div class="ref-card-footer">
+              <a href="https://doi.org/10.30878/ces.v28n4a7" target="_blank" rel="noopener noreferrer" class="ref-action-link">
+                <span>Acceder al documento (DOI)</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
       </div>
     </section>
 
@@ -1214,10 +1345,10 @@
     <section id="comentarios" class="section comments-section">
       <div class="container">
         <div class="section-header text-center">
-          <span class="badge">Debate e Interacción</span>
-          <h2>Espacio de Comentarios y Discusión</h2>
-          <p>
-            Invitamos a nuestro docente y compañeros de curso a compartir sus opiniones, observaciones críticas o preguntas sobre los diseños cuantitativos y cualitativos. ¿Has aplicado alguno en tus proyectos de software?
+          <span class="badge" data-i18n="comm_badge">Debate e Interacción</span>
+          <h2 data-i18n="comm_title">Espacio de Comentarios y Discusión</h2>
+          <p data-i18n="comm_subtitle">
+            Invitamos a nuestro docente y compañeros de curso a compartir sus opiniones, observaciones críticas o preguntas sobre los diseños cuantitativos y cualitativos. ¿Has aplicado alguno en tus proyectos de investigación o docencia?
           </p>
           <!-- Contador discreto de comentarios -->
           <div class="disqus-count-badge">
@@ -1243,34 +1374,34 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-col">
-          <h4>Metodología de la Investigación</h4>
-          <p>
-            Blog académico digital elaborado para la actividad individual sobre diseños cuantitativos y cualitativos de investigación científica y su aplicación en la industria del software.
+          <h4 data-i18n="footer_col1_title">Metodología de la Investigación</h4>
+          <p data-i18n="footer_col1_desc">
+            Blog académico digital elaborado para la actividad del módulo sobre diseños cuantitativos y cualitativos de investigación científica, aplicados a la educación, la enseñanza de lenguas y las tecnologías de información.
           </p>
         </div>
 
         <div class="footer-col">
-          <h4>Navegación Rápida</h4>
+          <h4 data-i18n="footer_col2_title">Navegación Rápida</h4>
           <ul class="footer-links">
-            <li><a href="#inicio">Inicio / Portada</a></li>
-            <li><a href="#cuantitativo">Ruta Cuantitativa</a></li>
-            <li><a href="#cualitativo">Ruta Cualitativa</a></li>
-            <li><a href="#comparacion">Tabla Comparativa</a></li>
-            <li><a href="#tecnicas">Técnicas de Recolección</a></li>
-            <li><a href="#articulos">Artículos Científicos</a></li>
-            <li><a href="#quiz">Quiz de Autoevaluación</a></li>
-            <li><a href="#bibliografia">Referencias APA 7</a></li>
+            <li><a href="#inicio" data-i18n="nav_home">Inicio / Portada</a></li>
+            <li><a href="#cuantitativo" data-i18n="nav_quant">Ruta Cuantitativa</a></li>
+            <li><a href="#cualitativo" data-i18n="nav_qual">Ruta Cualitativa</a></li>
+            <li><a href="#comparacion" data-i18n="nav_comp">Tabla Comparativa</a></li>
+            <li><a href="#tecnicas" data-i18n="nav_tech">Técnicas de Recolección</a></li>
+            <li><a href="#articulos" data-i18n="nav_articles">Artículos Científicos</a></li>
+            <li><a href="#quiz" data-i18n="nav_quiz">Quiz de Autoevaluación</a></li>
+            <li><a href="#bibliografia" data-i18n="nav_refs">Referencias Bibliográficas</a></li>
           </ul>
         </div>
 
         <div class="footer-col">
-          <h4>Ficha Académica</h4>
+          <h4 data-i18n="footer_col3_title">Ficha Académica</h4>
           <ul class="footer-links" style="color: #cbd5e1;">
-            <li><strong>Autores:</strong> Lizeth Dejoy, Kamila Mogollón, Juan Rodriguez</li>
-            <li><strong>Programa:</strong> Licenciatura en Inglés</li>
-            <li><strong>Módulo:</strong> Metodología de la Investigación</li>
-            <li><strong>Año Académico:</strong> 2026</li>
-            <li><strong>Plataforma Disqus:</strong> investigacioncua</li>
+            <li><strong data-i18n="footer_label_authors">Autores:</strong> Lizeth Dejoy, Kamila Mogollón, Juan Rodriguez</li>
+            <li><strong data-i18n="footer_label_program">Programa:</strong> Licenciatura en Inglés</li>
+            <li><strong data-i18n="footer_label_module">Módulo:</strong> Metodología de la Investigación</li>
+            <li><strong data-i18n="footer_label_year">Año Académico:</strong> 2026</li>
+            <li><strong data-i18n="footer_label_disqus">Plataforma Disqus:</strong> investigacioncua</li>
           </ul>
         </div>
       </div>
