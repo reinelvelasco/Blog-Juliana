@@ -75,9 +75,5 @@
     <text x="57" y="150" font-family="system-ui, sans-serif" font-size="10" fill="#94a3b8" text-anchor="middle">Logs y código</text>
     <text x="57" y="190" font-family="system-ui, sans-serif" font-size="9" font-weight="600" fill="#fb7185" text-anchor="middle">Evidencia dura</text>
   </g>
-
-  <text x="400" y="380" font-family="system-ui, sans-serif" font-size="12" font-weight="500" fill="#94a3b8" text-anchor="middle">
-    Placeholder activo | Reemplazar por img/tecnicas-recoleccion.jpg
-  </text>
 </svg>
 

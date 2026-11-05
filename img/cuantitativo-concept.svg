@@ -32,9 +32,5 @@
   <!-- Label Badge -->
   <rect x="230" y="40" width="340" height="42" rx="21" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5"/>
   <text x="400" y="67" font-family="system-ui, sans-serif" font-size="16" font-weight="700" fill="#38bdf8" text-anchor="middle">RUTA CUANTITATIVA: MEDICIÓN Y CONTROL</text>
-  
-  <text x="400" y="420" font-family="system-ui, sans-serif" font-size="13" font-weight="500" fill="#94a3b8" text-anchor="middle">
-    Placeholder activo | Reemplazar por img/cuantitativo-concept.jpg
-  </text>
 </svg>
 
